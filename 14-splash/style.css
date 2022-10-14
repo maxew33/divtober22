@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #C3F8FF;
+    --font: #881517;
+    --leaves: #7ace25;
+    --green-s: #2faf17;
+    --tomato-l: #ff5641;
+    --tomato-s: #dc2839;
+    --border: #881517;
+    --floor: #ccc;
+    --ceiling: gray;
+    --piston: gray;
+    --tongue: #ff93ba;
+    --mouth: #e56080;
+    --blood: crimson;
+}
+
+body {
+    background: var(--bg);
+    height: 100vh;
+    font-size: 3.5vmin;
+    overflow: hidden;
+}
+
+.drawing-container {
+    position: absolute;
+    border: none;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80vmin;
+    width: 80vmin;
+    display: grid;
+    place-content: center;
+    font-family: 'Reem Kufi', sans-serif;
+    font-size: 3.5vmin;
+    color: var(--font);
+    text-align: center;
+    line-height: 90vmin;
+    background:
+        /* text => hello */
+        linear-gradient(90deg, #0000 50%, var(--font) 0) 55% 28% / 2% 8%,
+        linear-gradient(90deg, #0000 50%, var(--font) 0) 58% 28% / 2% 8%,
+        linear-gradient(#0000 50%, var(--font) 0) 58% 30% / 4% 2%,
+
+        linear-gradient(90deg, #0000 50%, var(--font) 0) 61% 28% / 2% 8%,
+        linear-gradient(#0000 50%, var(--font) 0) 63.25% 30% / 2.5% 2%,
+        linear-gradient(#0000 50%, var(--font) 0) 63.5% 25% / 4% 2%,
+        linear-gradient(#0000 50%, var(--font) 0) 63.5% 32.45% / 4% 2%,
+
+        linear-gradient(90deg, #0000 50%, var(--font) 0) 67% 28% / 2% 8%,
+        linear-gradient(#0000 50%, var(--font) 0) 69.5% 32.45% / 4% 2%,
+
+        linear-gradient(90deg, #0000 50%, var(--font) 0) 73% 28% / 2% 8%,
+        linear-gradient(#0000 50%, var(--font) 0) 76% 32.45% / 4% 2%,
+
+        linear-gradient(90deg, #0000 50%, var(--font) 0) 79.5% 28% / 2% 8%,
+        linear-gradient(#0000 50%, var(--font) 0) 82.25% 32.45% / 4% 2%,
+        linear-gradient(90deg, #0000 50%, var(--font) 0) 82.7% 28% / 2% 8%,
+        linear-gradient(#0000 50%, var(--font) 0) 82.25% 25% / 4% 2%,
+
+        /* bubble */
+        conic-gradient(at 0% 100%, #0000 0deg 20deg, #fff 20deg 60deg, #0000 0) 67.5% 38% / 7.5% 6.5%,
+        radial-gradient(ellipse 80% 30% at 68% 29.5%, #fff 27.5%, #000 27.5% 28.5%, #0000 0),
+        conic-gradient(at 0% 100%, #0000 0deg 20deg, #000 20deg 60deg, #0000 0) 68% 38% / 8.75% 7.5%,
+
+        /* tomato */
+        /* stem */
+        radial-gradient(ellipse 20% 100% at 0.5% 40%, #0000 0 50%, var(--border) 0 80%, #0000 0) 56.5% 41.5% / 10% 9%,
+        radial-gradient(ellipse 20% 100% at 0.5% 70%, #0000 0 50%, var(--border) 0 80%, #0000 0) 54.5% 40.5% / 10% 10%,
+        radial-gradient(ellipse 100% 50% at 0% 100%, #0000 50%, var(--border) 0 65%, #0000 0) 51.75% 34.5% / 5% 5%,
+        radial-gradient(ellipse 25% 100% at 0% 58.5%, #0000 20%, var(--leaves) 0 80%, #0000 0) 55.5% 40.75% / 10% 10%,
+        /* leaves */
+        /*top*/
+        radial-gradient(ellipse 100% 40% at 50% -10%, #0000 0 50%, var(--border) 0 57.5%, #0000 0) 51% 52.5% / 17.5% 20%,
+
+        /*right*/
+        radial-gradient(ellipse 70% 120% at 0% -10%, #0000 0 48%, var(--border) 0 55%, #0000 0) 62.5% 46% / 12.5% 8%,
+        radial-gradient(ellipse 70% 100% at 0% -10%, #0000 0 50%, var(--border) 0 55%, #0000 0) 47.5% 51% / 15% 10%,
+        radial-gradient(ellipse 70% 100% at 0% -10%, #0000 0 50%, var(--border) 0 55%, #0000 0) 50% 51% / 20% 8%,
+
+        /*left*/
+        radial-gradient(ellipse 70% 100% at 110% 10%, #0000 0 48.5%, var(--border) 0 55%, #0000 0) 38% 45.5% / 12.5% 8%,
+        radial-gradient(ellipse 70% 100% at 100% 10%, #0000 0 50%, var(--border) 0 55%, #0000 0) 53.5% 50% / 15% 10%,
+        radial-gradient(ellipse 70% 100% at 100% 10%, #0000 0 50%, var(--border) 0 55%, #0000 0) 50.5% 50.5% / 20% 8%,
+        /*center*/
+        radial-gradient(ellipse 70% 100% at 0% 80%, #0000 0 49%, var(--border) 0 56%, #0000 0) 55% 49% / 15% 8%, radial-gradient(ellipse 70% 100% at 0% 10%, #0000 0 40%, var(--border) 0 56%, #0000 0) 55% 51.5% / 5% 5%,
+
+        radial-gradient(ellipse 100% 40% at 50% -5%, #0000 0 20%, var(--leaves) 0 55%, #0000 0) 50% 56.5% / 15% 22.5%,
+        conic-gradient(from 110deg, var(--leaves) 60deg, #0000 0) 42% 42% / 7.5% 5%, conic-gradient(from 200deg, var(--leaves) 50deg, #0000 0) 60% 42% / 7.5% 5%,
+        conic-gradient(from 40deg, var(--leaves) 20deg, #0000 0) 42% 50% / 12% 12%,
+        conic-gradient(from 350deg, var(--leaves) 50deg, #0000 0) 52.5% 52% / 5% 11%,
+        conic-gradient(from 320deg at 100% 90%, var(--leaves) 55deg, #0000 0) 50.5% 49.5% / 5% 5%,
+        conic-gradient(from 285deg at 100% 100%, var(--leaves) 19deg, #0000 0) 57.5% 49% / 5% 5%,
+        linear-gradient(var(--leaves), var(--leaves) 100%) 55% 49% / 1% 2.25%,
+
+        /* face */
+        /* eyes */
+        /* angry */
+
+        radial-gradient(circle at center, #fff 40%, #0000 0) 44% 56.5% / 1% 1%,
+        radial-gradient(circle at center, #fff 40%, #0000 0) 45.5% 54% / 5% 5%,
+        radial-gradient(circle at center, #fff 40%, #0000 0) 54% 56.5% / 1% 1%,
+        radial-gradient(circle at center, #fff 40%, #0000 0) 55.5% 54% / 5% 5%,
+        radial-gradient(ellipse 80% 100% at center, var(--border) 50%, #0000 0) 45% 55.5% / 7.5% 7.5%,
+        radial-gradient(ellipse 80% 100% at center, var(--border) 50%, #0000 0) 55% 55.5% / 7.5% 7.5%,
+        /* mouth */
+        radial-gradient(ellipse 25% 100% at 50% 0%, var(--tongue) 50%, #0000 0) 50% 67.5% / 10% 7.5%,
+        radial-gradient(ellipse 25% 100% at 50% 0%, var(--mouth) 50%, #0000 0) 50% 68% / 11.5% 11.5%,
+        radial-gradient(ellipse 25% 100% at 50% 0%, var(--border) 50%, #0000 0) 50% 70% / 15% 15%,
+
+        /* body */
+        radial-gradient(ellipse 100% 85%, var(--tomato-l) 0 50%, #0000 0) 47% 62% / 27.5% 27.5%,
+        radial-gradient(ellipse 100% 85%, var(--tomato-s) 46.5%, var(--border) 0 49%, #0000 0) 50% 65% / 35% 35%,
+        /* arms */
+        radial-gradient(ellipse 50% 100% at 100% 0%, #0000 50%, var(--border) 0 60%, #0000 0) 22.5% 55% / 15% 15%,
+        radial-gradient(ellipse 50% 100% at 0% 0%, #0000 50%, var(--border) 0 60%, #0000 0) 77.5% 55% / 15% 15%,
+        /* hands */
+        radial-gradient(ellipse 70% 100% at center, var(--border) 50%, #0000 0) 29% 45% / 5% 5%,
+        radial-gradient(ellipse 70% 100% at center, var(--border) 50%, #0000 0) 71% 45% / 5% 5%,
+        /* legs */
+        radial-gradient(ellipse 50% 100% at 100% 100%, #0000 50%, var(--border) 0 60%, #0000 0) 30% 75% / 20% 20%,
+        radial-gradient(ellipse 50% 100% at 0% 100%, #0000 50%, var(--border) 0 60%, #0000 0) 70% 75% / 20% 20%,
+        /* foots */
+        radial-gradient(ellipse 100% 50% at 50% 100%, var(--border) 50%, #0000 0) 35% 78% / 7.5% 10%,
+        radial-gradient(ellipse 100% 50% at 50% 100%, var(--border) 50%, #0000 0) 65% 78% / 7.5% 10%,
+
+        /* floor */
+        linear-gradient(#0000 80%, var(--floor) 0),
+        var(--bg);
+    background-repeat: no-repeat;
+}
+
+.drawing-container:hover {
+    background:
+        /* text => stop ! */
+        linear-gradient(90deg, #0000 50%, var(--font) 0) 55% 27.2% / 2% 5.75%,
+        linear-gradient(90deg, #0000 50%, var(--font) 0) 58.3% 32% / 2% 2.25%, linear-gradient(#0000 50%, var(--font) 0) 57.5% 30% / 4% 2%,
+        linear-gradient(#0000 50%, var(--font) 0) 57.5% 25% / 4% 2%,
+        linear-gradient(#0000 50%, var(--font) 0) 57.5% 32.45% / 4% 2%,
+
+        linear-gradient(90deg, #0000 50%, var(--font) 0) 62.25% 28% / 2% 8%,
+        linear-gradient(#0000 50%, var(--font) 0) 63.5% 25% / 4% 2%,
+
+        linear-gradient(90deg, #0000 50%, var(--font) 0) 67% 28% / 2% 8%,
+        linear-gradient(#0000 50%, var(--font) 0) 69.5% 32.45% / 4% 2%,
+        linear-gradient(90deg, #0000 50%, var(--font) 0) 70.2% 28% / 2% 8%,
+        linear-gradient(#0000 50%, var(--font) 0) 69.5% 25% / 4% 2%,
+
+        linear-gradient(90deg, #0000 50%, var(--font) 0) 73% 28% / 2% 8%,
+        linear-gradient(#0000 50%, var(--font) 0) 75.75% 25% / 4% 2%,
+        linear-gradient(#0000 50%, var(--font) 0) 75.75% 30% / 4% 2%,
+        linear-gradient(90deg, #0000 50%, var(--font) 0) 76.25% 27% / 2% 5.5%,
+
+        linear-gradient(90deg, #0000 50%, var(--font) 0) 80.5% 27% / 2% 5.5%,
+        linear-gradient(90deg, #0000 50%, var(--font) 0) 80.5% 33.25% / 2% 1%,
+
+        /* bubble */
+        conic-gradient(at 0% 100%, #0000 0deg 20deg, #fff 20deg 60deg, #0000 0) 67.5% 38% / 7.5% 6.5%,
+        radial-gradient(ellipse 80% 30% at 68% 29.5%, #fff 27.5%, #000 27.5% 28.5%, #0000 0),
+        conic-gradient(at 0% 100%, #0000 0deg 20deg, #000 20deg 60deg, #0000 0) 68% 38% / 8.75% 7.5%,
+
+        /* tomato */
+        /* stem */
+        radial-gradient(ellipse 20% 100% at 0.5% 40%, #0000 0 50%, var(--border) 0 80%, #0000 0) 56.5% 41.5% / 10% 9%,
+        radial-gradient(ellipse 20% 100% at 0.5% 70%, #0000 0 50%, var(--border) 0 80%, #0000 0) 54.5% 40.5% / 10% 10%,
+        radial-gradient(ellipse 100% 50% at 0% 100%, #0000 50%, var(--border) 0 65%, #0000 0) 51.75% 34.5% / 5% 5%,
+        radial-gradient(ellipse 25% 100% at 0% 58.5%, #0000 20%, var(--leaves) 0 80%, #0000 0) 55.5% 40.75% / 10% 10%,
+        /* leaves */
+        /*top*/
+        radial-gradient(ellipse 100% 40% at 50% -10%, #0000 0 50%, var(--border) 0 57.5%, #0000 0) 51% 52.5% / 17.5% 20%,
+
+        /*right*/
+        radial-gradient(ellipse 70% 120% at 0% -10%, #0000 0 48%, var(--border) 0 55%, #0000 0) 62.5% 46% / 12.5% 8%,
+        radial-gradient(ellipse 70% 100% at 0% -10%, #0000 0 50%, var(--border) 0 55%, #0000 0) 47.5% 51% / 15% 10%,
+        radial-gradient(ellipse 70% 100% at 0% -10%, #0000 0 50%, var(--border) 0 55%, #0000 0) 50% 51% / 20% 8%,
+
+        /*left*/
+        radial-gradient(ellipse 70% 100% at 110% 10%, #0000 0 48.5%, var(--border) 0 55%, #0000 0) 38% 45.5% / 12.5% 8%,
+        radial-gradient(ellipse 70% 100% at 100% 10%, #0000 0 50%, var(--border) 0 55%, #0000 0) 53.5% 50% / 15% 10%,
+        radial-gradient(ellipse 70% 100% at 100% 10%, #0000 0 50%, var(--border) 0 55%, #0000 0) 50.5% 50.5% / 20% 8%,
+        /*center*/
+        radial-gradient(ellipse 70% 100% at 0% 80%, #0000 0 49%, var(--border) 0 56%, #0000 0) 55% 49% / 15% 8%, radial-gradient(ellipse 70% 100% at 0% 10%, #0000 0 40%, var(--border) 0 56%, #0000 0) 55% 51.5% / 5% 5%,
+
+        radial-gradient(ellipse 100% 40% at 50% -5%, #0000 0 20%, var(--leaves) 0 55%, #0000 0) 50% 56.5% / 15% 22.5%,
+        conic-gradient(from 110deg, var(--leaves) 60deg, #0000 0) 42% 42% / 7.5% 5%, conic-gradient(from 200deg, var(--leaves) 50deg, #0000 0) 60% 42% / 7.5% 5%,
+        conic-gradient(from 40deg, var(--leaves) 20deg, #0000 0) 42% 50% / 12% 12%,
+        conic-gradient(from 350deg, var(--leaves) 50deg, #0000 0) 52.5% 52% / 5% 11%,
+        conic-gradient(from 320deg at 100% 90%, var(--leaves) 55deg, #0000 0) 50.5% 49.5% / 5% 5%,
+        conic-gradient(from 285deg at 100% 100%, var(--leaves) 19deg, #0000 0) 57.5% 49% / 5% 5%,
+        linear-gradient(var(--leaves), var(--leaves) 100%) 55% 49% / 1% 2.25%,
+
+        /* face */
+        /* eyes */
+        /* angry */
+        radial-gradient(ellipse 100% 70% at 100% 0%, var(--tomato-l) 50%, var(--border) 0 65%, #0000 0) 42% 54% / 10% 5%,
+        radial-gradient(ellipse 100% 70% at 0% 0%, var(--tomato-l) 50%, var(--border) 0 65%, #0000 0) 57.75% 54% / 10% 5%,
+
+        radial-gradient(circle at center, #fff 40%, #0000 0) 44% 56.5% / 1% 1%,
+        radial-gradient(circle at center, #fff 40%, #0000 0) 45.5% 54% / 5% 5%,
+        radial-gradient(circle at center, #fff 40%, #0000 0) 54% 56.5% / 1% 1%,
+        radial-gradient(circle at center, #fff 40%, #0000 0) 55.5% 54% / 5% 5%,
+        radial-gradient(ellipse 80% 100% at center, var(--border) 50%, #0000 0) 45% 55.5% / 7.5% 7.5%,
+        radial-gradient(ellipse 80% 100% at center, var(--border) 50%, #0000 0) 55% 55.5% / 7.5% 7.5%,
+        /* mouth */
+        /*angry*/
+        radial-gradient(ellipse 25% 100% at 50% 100%, var(--mouth) 50%, #0000 0) 50% 62% / 10% 7.5%,
+        radial-gradient(ellipse 25% 100% at 50% 100%, var(--tongue) 50%, #0000 0) 50% 63% / 11.5% 11.5%,
+        radial-gradient(ellipse 25% 100% at 50% 100%, var(--border) 50%, #0000 0) 50% 62.5% / 15% 15%,
+
+        /* body */
+        radial-gradient(ellipse 100% 85%, var(--tomato-l) 0 50%, #0000 0) 47% 62% / 27.5% 27.5%,
+        radial-gradient(ellipse 100% 85%, var(--tomato-s) 46.5%, var(--border) 0 49%, #0000 0) 50% 65% / 35% 35%,
+        /* arms */
+        radial-gradient(ellipse 50% 100% at 100% 0%, #0000 50%, var(--border) 0 60%, #0000 0) 22.5% 55% / 15% 15%,
+        radial-gradient(ellipse 50% 100% at 0% 0%, #0000 50%, var(--border) 0 60%, #0000 0) 77.5% 55% / 15% 15%,
+        /* hands */
+        radial-gradient(ellipse 70% 100% at center, var(--border) 50%, #0000 0) 29% 45% / 5% 5%,
+        radial-gradient(ellipse 70% 100% at center, var(--border) 50%, #0000 0) 71% 45% / 5% 5%,
+        /* legs */
+        radial-gradient(ellipse 50% 100% at 100% 100%, #0000 50%, var(--border) 0 60%, #0000 0) 30% 75% / 20% 20%,
+        radial-gradient(ellipse 50% 100% at 0% 100%, #0000 50%, var(--border) 0 60%, #0000 0) 70% 75% / 20% 20%,
+        /* foots */
+        radial-gradient(ellipse 100% 50% at 50% 100%, var(--border) 50%, #0000 0) 35% 78% / 7.5% 10%,
+        radial-gradient(ellipse 100% 50% at 50% 100%, var(--border) 50%, #0000 0) 65% 78% / 7.5% 10%,
+
+        /* floor */
+        linear-gradient(#0000 80%, var(--floor) 0),
+        var(--bg);
+    background-repeat: no-repeat;
+}
+
+.drawing-container::after,
+.drawing-container::before {
+    content: "";
+    height: 80vmin;
+    width: 80vmin;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+}
+
+/* piston */
+.drawing-container::after {
+    background:
+        linear-gradient(90deg, #0000 20%, #0005 50%, #0000 80% 100%),
+        var(--piston);
+    width: 50%;
+    top: 1%;
+    left: 25%;
+    transform-origin: top center;
+    transform: scaleY(0%);
+}
+
+/* ceiling*/
+.drawing-container::before {
+    background:
+        conic-gradient(from 330deg at 50% 100%, var(--ceiling) 0 60deg, #0000 0) -50% 100% / 50% 50%,
+        conic-gradient(from 330deg at 50% 100%, var(--ceiling) 0 60deg, #0000 0) -39% 100% / 50% 50%,
+        conic-gradient(from 330deg at 50% 100%, var(--ceiling) 0 60deg, #0000 0) -28% 100% / 50% 50%,
+        conic-gradient(from 330deg at 50% 100%, var(--ceiling) 0 60deg, #0000 0) -17% 100% / 50% 50%,
+        conic-gradient(from 330deg at 50% 100%, var(--ceiling) 0 60deg, #0000 0) -6% 100% / 50% 50%,
+        conic-gradient(from 330deg at 50% 100%, var(--ceiling) 0 60deg, #0000 0) 5% 100% / 50% 50%,
+        conic-gradient(from 330deg at 50% 100%, var(--ceiling) 0 60deg, #0000 0) 16% 100% / 50% 50%,
+        conic-gradient(from 330deg at 50% 100%, var(--ceiling) 0 60deg, #0000 0) 27% 100% / 50% 50%,
+        conic-gradient(from 330deg at 50% 100%, var(--ceiling) 0 60deg, #0000 0) 38% 100% / 50% 50%,
+        conic-gradient(from 330deg at 50% 100%, var(--ceiling) 0 60deg, #0000 0) 49% 100% / 50% 50%,
+        conic-gradient(from 330deg at 50% 100%, var(--ceiling) 0 60deg, #0000 0) 61% 100% / 50% 50%,
+        conic-gradient(from 330deg at 50% 100%, var(--ceiling) 0 60deg, #0000 0) 72% 100% / 50% 50%,
+        conic-gradient(from 330deg at 50% 100%, var(--ceiling) 0 60deg, #0000 0) 83% 100% / 50% 50%,
+        conic-gradient(from 330deg at 50% 100%, var(--ceiling) 0 60deg, #0000 0) 94% 100% / 50% 50%,
+        conic-gradient(from 330deg at 50% 100%, var(--ceiling) 0 60deg, #0000 0) 105% 100% / 50% 50%,
+        conic-gradient(from 330deg at 50% 100%, var(--ceiling) 0 60deg, #0000 0) 116% 100% / 50% 50%,
+        conic-gradient(from 330deg at 50% 100%, var(--ceiling) 0 60deg, #0000 0) 127% 100% / 50% 50%,
+        conic-gradient(from 330deg at 50% 100%, var(--ceiling) 0 60deg, #0000 0) 138.5% 100% / 50% 50%,
+        conic-gradient(from 330deg at 50% 100%, var(--ceiling) 0 60deg, #0000 0) 150% 100% / 50% 50%,
+        linear-gradient(var(--ceiling) 50%, #0000 0);
+    background-repeat: no-repeat;
+    height: 10%;
+    transform: translateY(0%);
+}
+
+.drawing-container:focus-within {
+    animation: 2s splash ease-in forwards;
+}
+
+.drawing-container:focus-within::before {
+    animation: 2s ease-out to-the-floor forwards;
+}
+
+.drawing-container:focus-within::after {
+    animation: 2s ease-out growing-piston forwards;
+}
+
+@keyframes to-the-floor {
+    to {
+        transform: translateY(700%);
+    }
+}
+
+@keyframes growing-piston {
+    to {
+        transform: scaleY(70%);
+    }
+}
+
+@keyframes splash {
+    0% {
+        background:
+            /* tomato */
+            /* stem */
+            radial-gradient(ellipse 20% 100% at 0.5% 40%, #0000 0 50%, var(--border) 0 80%, #0000 0) 56.5% 41.5% / 10% 9%,
+            radial-gradient(ellipse 20% 100% at 0.5% 70%, #0000 0 50%, var(--border) 0 80%, #0000 0) 54.5% 40.5% / 10% 10%,
+            radial-gradient(ellipse 100% 50% at 0% 100%, #0000 50%, var(--border) 0 65%, #0000 0) 51.75% 34.5% / 5% 5%,
+            radial-gradient(ellipse 25% 100% at 0% 58.5%, #0000 20%, var(--leaves) 0 80%, #0000 0) 55.5% 40.75% / 10% 10%,
+            /* leaves */
+            /*top*/
+            radial-gradient(ellipse 100% 40% at 50% -10%, #0000 0 50%, var(--border) 0 57.5%, #0000 0) 51% 52.5% / 17.5% 20%,
+
+            /*right*/
+            radial-gradient(ellipse 70% 120% at 0% -10%, #0000 0 48%, var(--border) 0 55%, #0000 0) 62.5% 46% / 12.5% 8%,
+            radial-gradient(ellipse 70% 100% at 0% -10%, #0000 0 50%, var(--border) 0 55%, #0000 0) 47.5% 51% / 15% 10%,
+            radial-gradient(ellipse 70% 100% at 0% -10%, #0000 0 50%, var(--border) 0 55%, #0000 0) 50% 51% / 20% 8%,
+
+            /*left*/
+            radial-gradient(ellipse 70% 100% at 110% 10%, #0000 0 48.5%, var(--border) 0 55%, #0000 0) 38% 45.5% / 12.5% 8%,
+            radial-gradient(ellipse 70% 100% at 100% 10%, #0000 0 50%, var(--border) 0 55%, #0000 0) 53.5% 50% / 15% 10%,
+            radial-gradient(ellipse 70% 100% at 100% 10%, #0000 0 50%, var(--border) 0 55%, #0000 0) 50.5% 50.5% / 20% 8%,
+            /*center*/
+            radial-gradient(ellipse 70% 100% at 0% 80%, #0000 0 49%, var(--border) 0 56%, #0000 0) 55% 49% / 15% 8%, radial-gradient(ellipse 70% 100% at 0% 10%, #0000 0 40%, var(--border) 0 56%, #0000 0) 55% 51.5% / 5% 5%,
+
+            radial-gradient(ellipse 100% 40% at 50% -5%, #0000 0 20%, var(--leaves) 0 55%, #0000 0) 50% 56.5% / 15% 22.5%,
+            conic-gradient(from 110deg, var(--leaves) 60deg, #0000 0) 42% 42% / 7.5% 5%, conic-gradient(from 200deg, var(--leaves) 50deg, #0000 0) 60% 42% / 7.5% 5%,
+            conic-gradient(from 40deg, var(--leaves) 20deg, #0000 0) 42% 50% / 12% 12%,
+            conic-gradient(from 350deg, var(--leaves) 50deg, #0000 0) 52.5% 52% / 5% 11%,
+            conic-gradient(from 320deg at 100% 90%, var(--leaves) 55deg, #0000 0) 50.5% 49.5% / 5% 5%,
+            conic-gradient(from 285deg at 100% 100%, var(--leaves) 19deg, #0000 0) 57.5% 49% / 5% 5%,
+            linear-gradient(var(--leaves), var(--leaves) 100%) 55% 49% / 1% 2.25%,
+
+            /* face */
+            /* eyes */
+            /* angry */
+            radial-gradient(ellipse 100% 70% at 100% 0%, var(--tomato-l) 50%, var(--border) 0 65%, #0000 0) 42% 54% / 10% 5%,
+            radial-gradient(ellipse 100% 70% at 0% 0%, var(--tomato-l) 50%, var(--border) 0 65%, #0000 0) 57.75% 54% / 10% 5%,
+
+            radial-gradient(circle at center, #fff 40%, #0000 0) 44% 56.5% / 1% 1%,
+            radial-gradient(circle at center, #fff 40%, #0000 0) 45.5% 54% / 5% 5%,
+            radial-gradient(circle at center, #fff 40%, #0000 0) 54% 56.5% / 1% 1%,
+            radial-gradient(circle at center, #fff 40%, #0000 0) 55.5% 54% / 5% 5%,
+            radial-gradient(ellipse 80% 100% at center, var(--border) 50%, #0000 0) 45% 55.5% / 7.5% 7.5%,
+            radial-gradient(ellipse 80% 100% at center, var(--border) 50%, #0000 0) 55% 55.5% / 7.5% 7.5%,
+            /* mouth */
+            /*angry*/
+            radial-gradient(ellipse 25% 100% at 50% 100%, var(--mouth) 50%, #0000 0) 50% 62% / 10% 7.5%,
+            radial-gradient(ellipse 25% 100% at 50% 100%, var(--tongue) 50%, #0000 0) 50% 63% / 11.5% 11.5%,
+            radial-gradient(ellipse 25% 100% at 50% 100%, var(--border) 50%, #0000 0) 50% 62.5% / 15% 15%,
+
+            /* body */
+            radial-gradient(ellipse 100% 85%, var(--tomato-l) 0 50%, #0000 0) 47% 62% / 27.5% 27.5%,
+            radial-gradient(ellipse 100% 85%, var(--tomato-s) 46.5%, var(--border) 0 49%, #0000 0) 50% 65% / 35% 35%,
+            /* arms */
+            radial-gradient(ellipse 50% 100% at 100% 0%, #0000 50%, var(--border) 0 60%, #0000 0) 22.5% 55% / 15% 15%,
+            radial-gradient(ellipse 50% 100% at 0% 0%, #0000 50%, var(--border) 0 60%, #0000 0) 77.5% 55% / 15% 15%,
+            /* hands */
+            radial-gradient(ellipse 70% 100% at center, var(--border) 50%, #0000 0) 29% 45% / 5% 5%,
+            radial-gradient(ellipse 70% 100% at center, var(--border) 50%, #0000 0) 71% 45% / 5% 5%,
+            /* legs */
+            radial-gradient(ellipse 50% 100% at 100% 100%, #0000 50%, var(--border) 0 60%, #0000 0) 30% 75% / 20% 20%,
+            radial-gradient(ellipse 50% 100% at 0% 100%, #0000 50%, var(--border) 0 60%, #0000 0) 70% 75% / 20% 20%,
+            /* foots */
+            radial-gradient(ellipse 100% 50% at 50% 100%, var(--border) 50%, #0000 0) 35% 78% / 7.5% 10%,
+            radial-gradient(ellipse 100% 50% at 50% 100%, var(--border) 50%, #0000 0) 65% 78% / 7.5% 10%,
+
+            /* floor */
+            linear-gradient(#0000 80%, var(--floor) 0),
+            var(--bg);
+        background-repeat: no-repeat;
+    }
+    100% {
+        background:
+
+            /* floor */
+            /* tomato-blood */
+        radial-gradient(ellipse 100% 20% at 50% 0%, var(--blood) 45%, #0000 0) 50% 145.5% / 45% 45%,
+
+        /* from right to left */
+        radial-gradient(ellipse 40% 100% at 50% 0%, var(--blood) 40%, #0000 0) 69% 85.5% / 5% 5%,
+        radial-gradient(ellipse 80% 100% at 64% 100%, #0000 0 85%, var(--blood) 0) 67% 86% / 2.5% 5%,
+
+        radial-gradient(ellipse 40% 100% at 50% 0%, var(--blood) 40%, #0000 0) 65.5% 90% / 8% 8%,
+        radial-gradient(ellipse 80% 100% at 50% 100%, #0000 0 85%, var(--blood) 0) 62% 87% / 3% 5%,
+
+        radial-gradient(ellipse 40% 100% at 50% 0%, var(--blood) 40%, #0000 0) 60% 90% / 8% 9%,        
+        radial-gradient(ellipse 80% 100% at 50% 100%, #0000 0 85%, var(--blood) 0) 57.5% 87.75% / 3% 5%,
+
+        radial-gradient(ellipse 40% 100% at 50% 0%, var(--blood) 40%, #0000 0) 55% 93.75% / 10% 12%,
+
+        radial-gradient(ellipse 40% 100% at 50% 0%, var(--blood) 40%, #0000 0) 51% 91.5% / 15% 10%,         
+        radial-gradient(ellipse 80% 100% at 50% 100%, #0000 0 85%, var(--blood) 0) 48% 88% / 3% 5%,
+
+        radial-gradient(ellipse 40% 100% at 50% 0%, var(--blood) 40%, #0000 0) 45% 92% / 10% 10%,         
+        radial-gradient(ellipse 80% 100% at 50% 100%, #0000 0 85%, var(--blood) 0) 43.4% 88% / 2% 5%,
+
+        radial-gradient(ellipse 40% 100% at 50% 0%, var(--blood) 40%, #0000 0) 40% 95% / 10.5% 12%,                 
+        radial-gradient(ellipse 80% 100% at 50% 100%, #0000 0 85%, var(--blood) 0) 38% 88% / 3% 5.5%,
+
+        radial-gradient(ellipse 40% 100% at 50% 0%, var(--blood) 40%, #0000 0) 35% 90% / 8% 8%,                 
+        radial-gradient(ellipse 80% 100% at 50% 100%, #0000 0 89%, var(--blood) 0) 33.25% 87% / 2.5% 5.5%,
+
+        radial-gradient(ellipse 40% 100% at 50% 0%, var(--blood) 40%, #0000 0) 31% 87% / 6% 6%,                         
+        radial-gradient(ellipse 80% 100% at 0% 100%, #0000 0 85%, var(--blood) 0) 30.5% 82.75% / 2% 2.5%,
+            linear-gradient(#0000 80%, var(--floor) 0),
+
+            /* tomato */
+            /* body */
+            radial-gradient(ellipse 100% 85%, var(--tomato-s) 46.5%, var(--border) 0 49%, #0000 0) 50% 95% / 41% 41%,
+            var(--bg);
+        background-repeat: no-repeat;
+    }
+}

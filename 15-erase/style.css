@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+
+*, ::before, ::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --bg: #222;
+  --font: #ddd;
+}
+
+body{
+  background: var(--bg);
+  height: 100vh;
+  font-size: 3.5vmin;
+  overflow: hidden;
+}
+
+.drawing-container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vmin;
+  width: 80vmin;
+  display: grid;
+  place-content: center;
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 3.5vmin;
+  color: var(--font);
+  text-align: center;
+  line-height: 90vmin;
+  background: 
+    var(--bg);
+  background-repeat: no-repeat;
+}
+
+.drawing-container::after, 
+.drawing-container::before{
+  content: "";
+  height: 80vmin;
+  width: 80vmin;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+}
+
+.drawing-container::after{
+  
+}
+
+.drawing-container::before{
+  
+}
+
+/* helping grid => delete it ! */
+.grid{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vmin;
+  aspect-ratio: 1;
+  background: repeating-linear-gradient(#0000 0% 4.85%, olive 0 5%), repeating-linear-gradient(90deg, #0000 0% 4.85%, olive 0 5%), repeating-linear-gradient(#0000 0% 9.85%, orangered 0 10%), repeating-linear-gradient(90deg, #0000 0% 9.85%, orangered 0 10%) ;
+}
