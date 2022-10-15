@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+
+*, ::before, ::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --bg: #fdf;
+  --font: #000;
+}
+
+body{
+  background: var(--bg);
+  height: 100vh;
+  font-size: 3.5vmin;
+  overflow: hidden;
+}
+
+.drawing-container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vmin;
+  width: 80vmin;
+  display: grid;
+  place-content: center;
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 3.5vmin;
+  color: var(--font);
+  text-align: center;
+  line-height: 90vmin;
+  background: 
+    var(--bg);
+  background-repeat: no-repeat;
+}
+
+.drawing-container::after, 
+.drawing-container::before{
+  content: "";
+  height: 80vmin;
+  width: 80vmin;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+}
+
+.drawing-container::after{
+
+    background:       
+    radial-gradient(circle at 0% 50%, #000 45%, #0000 0) 52.25% 48.85% / 5% 5%,  
+    radial-gradient(circle at 100% 50%, #fff 12%, #000 0 33.5%, #0000 0) 37.25% 55% / 20% 20%,
+    radial-gradient(circle at 0% 50%, #fff 20%, #000 0 34.5%, #0000 0) 71% 50% / 30% 30%, 
+    radial-gradient(circle at 100% 50%, #fff 23%, #000 0 34.25%, #0000 0) 16.5% 56% / 40% 40%,
+    radial-gradient(circle at 0% 50%, #fff 25%, #000 0 34%, #0000 0) 99% 50% / 50% 50%, 
+    radial-gradient(circle at 100% 50%, #fff 27%, #000 0 34.25%, #0000 0) -25% 60% / 60% 60%,
+    radial-gradient(circle at 0% 50%, #fff 28.25%, #000 0 34.5%, #0000 0) 166% 50% / 70% 70%,    
+    radial-gradient(circle at 100% 50%, #fff 29.25%, #000 0 34.75%, #0000 0) -150% 70% / 80% 80%,
+    radial-gradient(circle at center, #fff 42.5%, #000 0 50%, #0000 0);
+    background-repeat: no-repeat;
+    animation: turn 1s linear infinite;
+  
+}
+
+.drawing-container::before{
+    height: 100vmin;
+    width: 100vmin;
+    background:
+    radial-gradient(ellipse 100% 60% at 50% -10%, #fff 43%, #000 0 47.5%, #0000 0) -50% 400% / 90% 90%,
+    radial-gradient(ellipse 100% 60% at 50% 110%, #fff 43%, #000 0 47.5%, #0000 0) -50% -500% / 90% 90%;
+    background-repeat: no-repeat;
+  
+}
+
+
+@keyframes turn{
+    from{
+        transform: scale(.5) rotate(0deg);
+    }
+    to{
+        transform: scale(.5) rotate(360deg);
+    }
+}

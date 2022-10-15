@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ms+Madi&family=Reem+Kufi&display=swap');
 
 *, ::before, ::after{
   margin: 0;
@@ -7,24 +7,30 @@
 }
 
 :root{
-  --bg: #222;
-  --font: #ddd;
+  --bg: #fff;
+  --font: #222;
+  --wood: #F8D9B3;
+  --pencil-col1: #FCC002;
+  --pencil-col2: #111;
+  --silver1: rgb(57, 57, 57);
+  --silver2:  rgb(134, 134, 134);
+  --eraser: pink;
 }
 
 body{
-  background: var(--bg);
   height: 100vh;
   font-size: 3.5vmin;
   overflow: hidden;
-}
+  }
 
 .drawing-container{
   position: absolute;
+  border: none;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 80vmin;
-  width: 80vmin;
+  height: 90vmin;
+  width: 90vmin;
   display: grid;
   place-content: center;
   font-family: 'Reem Kufi', sans-serif;
@@ -32,37 +38,130 @@ body{
   color: var(--font);
   text-align: center;
   line-height: 90vmin;
-  background: 
-    var(--bg);
+  background: var(--bg);
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .drawing-container::after, 
 .drawing-container::before{
   content: "";
-  height: 80vmin;
-  width: 80vmin;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-repeat: no-repeat;
-}
-
-.drawing-container::after{
-  
-}
-
-.drawing-container::before{
-  
-}
-
-/* helping grid => delete it ! */
-.grid{
+  height: 100vmin;
+  width: 100vmin;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80vmin;
-  aspect-ratio: 1;
-  background: repeating-linear-gradient(#0000 0% 4.85%, olive 0 5%), repeating-linear-gradient(90deg, #0000 0% 4.85%, olive 0 5%), repeating-linear-gradient(#0000 0% 9.85%, orangered 0 10%), repeating-linear-gradient(90deg, #0000 0% 9.85%, orangered 0 10%) ;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+.drawing-container::after{
+  width: 120vmin;
+  height: 100vmin;
+  transform: translate(-93.5%, 50%);
+  background:
+  radial-gradient(circle, var(--silver1) 60%, #0000 0) 92.75% 60% / 1.5% 1.5%,  
+  radial-gradient(circle, var(--silver1) 60%, #0000 0) 98.5% 60% / 1.5% 1.5%,
+  linear-gradient(#0000 50%, var(--silver1) 0) 98% 59.5% / 6% 2.75%,
+  
+  radial-gradient(circle, var(--silver2) 60%, #0000 0) 92.75% 61.1% / 1.5% 1.5%,  
+  radial-gradient(circle, var(--silver2) 60%, #0000 0) 98.5% 61.1% / 1.5% 1.5%,
+  linear-gradient(#0000 50%, var(--silver2) 0) 98% 60.5% / 6% 2.75%,
+  
+  radial-gradient(circle, var(--silver1) 60%, #0000 0) 92.75% 62.5% / 1.5% 1.5%,  
+  radial-gradient(circle, var(--silver1) 60%, #0000 0) 98.5% 62.5% / 1.5% 1.5%,
+  linear-gradient(#0000 50%, var(--silver1) 0) 98% 61.9% / 6% 2.75%,
+
+  linear-gradient(var(--eraser) 50%, #0000 0) 97.85% 65% / 6% 4%,
+  radial-gradient(ellipse 100% 50% at 50% 0%, var(--eraser) 50%, #0000 0) 97.85% 68% / 6% 6%,
+
+  linear-gradient(90deg, #0000 50%, var(--pencil-col1) 0 75%, var(--pencil-col2) 0 100%) 97.75% 21% / 12.25% 50%,
+  radial-gradient(circle at 50% 100%, var(--pencil-col1) 40%, #0000 0) 95.1% 6.85% / 3.75% 4%,
+  radial-gradient(circle at 50% 100%, var(--pencil-col2) 40%, #0000 0) 98.3% 6.85% / 3.75% 4%,
+   
+  conic-gradient(from 160deg at 50% 0%, black 40deg, #0000 0) 96% 0 / 2% 2%,
+  conic-gradient(from 160deg at 50% 0%, var(--wood) 40deg, #0000 0) 100% 0 / 10% 9.5%,
+  linear-gradient(var(--wood) 50%, #0000 0) 97.5% 10% / 5% 10%,
+  linear-gradient(90deg, var(--bg) 0 100%, #0000 0) 98% 70% / 6% 50%;
+  background-repeat: no-repeat;
+}
+
+.drawing-container::before{
+    font-family: 'Ms Madi', cursive;
+    color: blue;
+    font-weight: 600;
+    font-size: 16vmin;
+    content: "I can\'t do it !";
+    transform: translate(-50%, -30%);
+}
+
+.drawing-container:focus-within::after{
+  animation: erase 2.5s linear forwards;
+}
+
+@keyframes erase{
+  0%{
+    transform: translate(-93.5%, 50%);
+    background:
+  radial-gradient(circle, var(--silver1) 60%, #0000 0) 92.75% 60% / 1.5% 1.5%,  
+  radial-gradient(circle, var(--silver1) 60%, #0000 0) 98.5% 60% / 1.5% 1.5%,
+  linear-gradient(#0000 50%, var(--silver1) 0) 98% 59.5% / 6% 2.75%,
+  
+  radial-gradient(circle, var(--silver2) 60%, #0000 0) 92.75% 61.1% / 1.5% 1.5%,  
+  radial-gradient(circle, var(--silver2) 60%, #0000 0) 98.5% 61.1% / 1.5% 1.5%,
+  linear-gradient(#0000 50%, var(--silver2) 0) 98% 60.5% / 6% 2.75%,
+  
+  radial-gradient(circle, var(--silver1) 60%, #0000 0) 92.75% 62.5% / 1.5% 1.5%,  
+  radial-gradient(circle, var(--silver1) 60%, #0000 0) 98.5% 62.5% / 1.5% 1.5%,
+  linear-gradient(#0000 50%, var(--silver1) 0) 98% 61.9% / 6% 2.75%,
+
+  linear-gradient(var(--eraser) 50%, #0000 0) 97.85% 65% / 6% 4%,
+  radial-gradient(ellipse 100% 50% at 50% 0%, var(--eraser) 50%, #0000 0) 97.85% 68% / 6% 6%,
+
+  linear-gradient(90deg, #0000 50%, var(--pencil-col1) 0 75%, var(--pencil-col2) 0 100%) 97.75% 21% / 12.25% 50%,
+  radial-gradient(circle at 50% 100%, var(--pencil-col1) 40%, #0000 0) 95.1% 6.85% / 3.75% 4%,
+  radial-gradient(circle at 50% 100%, var(--pencil-col2) 40%, #0000 0) 98.3% 6.85% / 3.75% 4%,
+   
+  conic-gradient(from 160deg at 50% 0%, black 40deg, #0000 0) 96% 0 / 2% 2%,
+  conic-gradient(from 160deg at 50% 0%, var(--wood) 40deg, #0000 0) 100% 0 / 10% 9.5%,
+  linear-gradient(var(--wood) 50%, #0000 0) 97.5% 10% / 5% 10%,
+  linear-gradient(90deg, var(--bg) 0 100%, #0000 0) 98% 70% / 6% 50%;
+  background-repeat: no-repeat;   
+  }
+
+  70%, 90%{
+    transform: translate(-93.5%, -60%);
+    background:
+  radial-gradient(circle, var(--silver1) 60%, #0000 0) 92.75% 60% / 1.5% 1.5%,  
+  radial-gradient(circle, var(--silver1) 60%, #0000 0) 98.5% 60% / 1.5% 1.5%,
+  linear-gradient(#0000 50%, var(--silver1) 0) 98% 59.5% / 6% 2.75%,
+  
+  radial-gradient(circle, var(--silver2) 60%, #0000 0) 92.75% 61.1% / 1.5% 1.5%,  
+  radial-gradient(circle, var(--silver2) 60%, #0000 0) 98.5% 61.1% / 1.5% 1.5%,
+  linear-gradient(#0000 50%, var(--silver2) 0) 98% 60.5% / 6% 2.75%,
+  
+  radial-gradient(circle, var(--silver1) 60%, #0000 0) 92.75% 62.5% / 1.5% 1.5%,  
+  radial-gradient(circle, var(--silver1) 60%, #0000 0) 98.5% 62.5% / 1.5% 1.5%,
+  linear-gradient(#0000 50%, var(--silver1) 0) 98% 61.9% / 6% 2.75%,
+
+  linear-gradient(var(--eraser) 50%, #0000 0) 97.85% 65% / 6% 4%,
+  radial-gradient(ellipse 100% 50% at 50% 0%, var(--eraser) 50%, #0000 0) 97.85% 68% / 6% 6%,
+
+  linear-gradient(90deg, #0000 50%, var(--pencil-col1) 0 75%, var(--pencil-col2) 0 100%) 97.75% 21% / 12.25% 50%,
+  radial-gradient(circle at 50% 100%, var(--pencil-col1) 40%, #0000 0) 95.1% 6.85% / 3.75% 4%,
+  radial-gradient(circle at 50% 100%, var(--pencil-col2) 40%, #0000 0) 98.3% 6.85% / 3.75% 4%,
+   
+  conic-gradient(from 160deg at 50% 0%, black 40deg, #0000 0) 96% 0 / 2% 2%,
+  conic-gradient(from 160deg at 50% 0%, var(--wood) 40deg, #0000 0) 100% 0 / 10% 9.5%,
+  linear-gradient(var(--wood) 50%, #0000 0) 97.5% 10% / 5% 10%,
+  linear-gradient(90deg, var(--bg) 0 100%, #0000 0) 98% 70% / 6% 50%;
+  background-repeat: no-repeat;
+  }
+
+  90.1%, 100%{
+    transform: translate(-93.5%, -60%);
+    background:
+    linear-gradient(90deg, var(--bg) 0 100%, #0000 0) 98% 70% / 6% 50%;
+    background-repeat: no-repeat;
+  }
 }
