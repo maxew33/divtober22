@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&family=Fruktur&display=swap');
+
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font: #ddd;
+  --bg: #47493c;
+  --black: #47493c;
+  --grey: #6b6c5e;
+  --white1: #fff6f2;
+  --white2: #e1dddb;
+  --white3: #d2c8c3;
+  --yellow: #ffdb00;
+  --hufflegrey:#60605c;
+}
+
+body {
+  background: var(--bg);
+  height: 100vh;
+  font-size: 3.5vmin;
+  overflow: hidden;
+}
+
+.drawing-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vmin;
+  width: 80vmin;
+  display: grid;
+  place-content: center;
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 3.5vmin;
+  color: var(--font);
+  text-align: center;
+  line-height: 90vmin;
+  background:
+    /* head */
+    radial-gradient(ellipse 90% 100% at 50% 100%, #f7e8e1 49%, #0000 0) 50% -18.75% / 50% 50%,
+
+    /* ears */
+    /* left */  
+    linear-gradient(60deg, #0000 40%, black 0) 30.5% 25% / 6% 5%,
+    radial-gradient(ellipse 90% 100% at 32.5% 21.5%, black 3vmin, #e3d5cc 0 6vmin, #0000 0),
+    linear-gradient(60deg, #0000 57.5%, #e3d5cc 0) 24% 27.5% / 12.5% 10%,
+    /* right */
+    linear-gradient(300deg, #0000 40%, black 0) 68.5% 25% / 6% 5%,
+    radial-gradient(ellipse 90% 100% at 66.5% 21.5%, black 3vmin, #e3d5cc 0 6vmin, #0000 0),
+    linear-gradient(300deg, #0000 57.5%, #e3d5cc 0) 75.5% 27% / 12.5% 10%,
+
+    /* arms */
+    /* left */
+    radial-gradient(circle, black 40%, #0000 0) 41% 78.75% / 15% 15%,
+    radial-gradient(circle at 0% 100%, black 60%, #0000 0) 39.5% 67.75% / 5% 5%,
+    linear-gradient(45deg, #0000 26%, black 0 81%, #0000 0) 38% 75% / 11% 11%,
+
+    /* right */    
+    radial-gradient(circle, black 40%, #0000 0) 59.25% 78.75% / 15% 15%,
+    radial-gradient(circle at 100% 100%, black 60%, #0000 0) 60.75% 67.75% / 5% 5%,
+    linear-gradient(315deg, #0000 26%, black 0 81%, #0000 0) 62% 75% / 11% 11%,
+
+    /* scarf */
+    repeating-linear-gradient(90deg, #ffdb00 0% 15%, #60605c 16% 24%) 50% 62% / 25% 7.5%,    
+    repeating-linear-gradient(#ffdb00 0% 30%, #60605c 32% 48%) 58% 68% / 10% 12.5%,
+    repeating-linear-gradient(90deg, #ffdb00 0% 5%, #0000 5% 10%, #60605c 10% 15%, #0000 15% 20%) 58% 72% / 10% 7.5%, 
+
+    /* feet */
+    /* right */
+    radial-gradient(ellipse 150% 100% at 150% 69%, #0000 50%, black 0) 73.5% 87% / 2.5% 4.5%,
+    radial-gradient(ellipse 90% 100%, black 50%,#0000 0) 72.75% 85% / 7.5% 7.5%,
+
+    radial-gradient(ellipse 150% 100% at -50% 65%, #0000 60%, black 0) 57.75% 87% / 2.5% 4.5%,
+    radial-gradient(ellipse 90% 100%, black 50%,#0000 0) 60.25% 85% / 7.5% 7.5%,
+
+    radial-gradient(ellipse 75% 100%, #e3d5cc 30%,#0000 0) 70% 102% / 22.5% 22.5%,  
+    radial-gradient(ellipse 75% 100%, black 50%,#0000 0) 70% 100% / 22.5% 22.5%,
+
+    /* left */
+    radial-gradient(ellipse 150% 100% at 150% 69%, #0000 50%, black 0) 41.75% 87% / 2.5% 4.5%,
+    radial-gradient(ellipse 90% 100%, black 50%,#0000 0) 39.25% 85% / 7.5% 7.5%,
+
+    radial-gradient(ellipse 150% 100% at -50% 65%, #0000 60%, black 0) 26% 87% / 2.5% 4.5%,
+    radial-gradient(ellipse 90% 100%, black 50%,#0000 0) 26.75% 85% / 7.5% 7.5%,
+
+    radial-gradient(ellipse 75% 100%, #e3d5cc 30%,#0000 0) 30% 102% / 22.5% 22.5%,  
+    radial-gradient(ellipse 75% 100%, black 50%,#0000 0) 30% 100% / 22.5% 22.5%,
+    /* body */
+    linear-gradient(#f7e8e1 100%, #f7e8e1 0) 50% 80% / 25% 25%,
+    radial-gradient(ellipse 90% 100% at 50% 0%, #f7e8e1 50%, #0000 0) 50% 117% / 27.5% 27.5%,
+    /* shoulders */
+    radial-gradient(circle, black 40%, #0000 0) 35% 72.5% / 15% 15%,
+    radial-gradient(circle, black 40%, #0000 0) 65% 72.5% / 15% 15%,
+    /*  */
+    var(--bg);
+  background-repeat: no-repeat;
+}
+
+.drawing-container::after,
+.drawing-container::before {
+  position: absolute;
+}
+
+.drawing-container::after {
+  content: "Go hufflepuff";
+  font-family: 'fruktur', sans-serif;
+  font-size: 4vmin;
+  letter-spacing: .25vmin;
+  color: var(--yellow);
+  height: 10vmin;
+  width: 80vmin;
+  top: -40vmin;
+  text-align: center;
+}
+
+.drawing-container::before {
+  content: "";
+  top: 13vmin;
+  left: 22vmin;
+  height: 39vmin;
+  width: 35.5vmin;
+  border-radius: 50%;
+
+  background:
+    /* face */
+    /* eyes */
+    radial-gradient(circle at 71% 51%, white 2%, #0000 0),
+    radial-gradient(circle at 68% 54%, white 1%, #0000 0),
+    radial-gradient(ellipse 90% 100% at 70% 52%, black 5%, #0000 0),
+    radial-gradient(ellipse 90% 100% at 70% 50%, white 7.5%, #0000 0),
+
+    radial-gradient(circle at 31% 51%, white 2%, #0000 0),
+    radial-gradient(circle at 28% 54%, white 1%, #0000 0),
+    radial-gradient(ellipse 90% 100% at 30% 52%, black 5%, #0000 0),
+    radial-gradient(ellipse 90% 100% at 30% 50%, white 7.5%, #0000 0),
+
+    /* mouth */
+    
+    radial-gradient(ellipse 100% 100% at 50% 0%, pink 50%, #0000 0) 50% 100% / 10% 7.5%,
+
+    /* nose */
+    radial-gradient(ellipse 100% 50% at 50% 82%, black 15%, #0000 0),
+    radial-gradient(ellipse 100% 50% at 50% 86%, var(--white3) 30%, #0000 0),
+    /* stripes */
+    linear-gradient(93deg, #0000 59%, black 0 77%, #0000 0),
+    linear-gradient(87deg, #0000 23%, black 0 41%, #0000 0),
+    #f7e8e1;
+  background-repeat: no-repeat;
+}
