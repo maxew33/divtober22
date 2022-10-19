@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&family=Caesar+Dressing&display=swap');
+
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #ecc858;
+  --font: #ddd;
+  --skin: #463c4f;
+  --eyes: #ecc858;
+  --border: #000;
+  --shadow: #231b23;
+}
+
+body {
+  background: var(--skin);
+  height: 100vh;
+  font-size: 3.5vmin;
+  overflow: hidden;
+}
+
+.drawing-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vmin;
+  width: 80vmin;
+  display: grid;
+  place-content: center;
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 3.5vmin;
+  color: var(--font);
+  text-align: center;
+  line-height: 90vmin;
+}
+
+
+.drawing-container::after {
+  content: "cerberus";
+  height: 80vmin;
+  width: 80vmin;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: 'Caesar Dressing', cursive;
+  font-size: 8vmin;
+  letter-spacing: .75vmin;
+  text-align: center;
+  padding-top: 30vmin;
+  background:
+    /* ears - inner */
+
+    conic-gradient(from 182deg at 100% 0%, var(--skin) 20deg, #0000 0) 44.25vmin 21.5vmin / 8vmin 8vmin, 
+    
+    conic-gradient(from 180deg at 100% 0%, var(--skin) 30deg, #0000 0) 20.25vmin 21.5vmin / 8vmin 8vmin,
+    
+    conic-gradient(from 185deg at 100% 0%, var(--skin) 22.5deg, #0000 0) 38.7vmin 20vmin / 8vmin 8vmin,    
+    conic-gradient(from 155deg at 0% 0%, var(--skin) 22.5deg, #0000 0) 32.8vmin 20vmin / 8vmin 8vmin,
+
+    /* eyes */
+    radial-gradient(circle at 50% 100%, #0000 50%, var(--skin) 0) 57.25vmin 32.4vmin / 1.5% 2%,
+    conic-gradient(from 340deg at 50% 100%, var(--eyes) 15deg, #0000 0) 56.75vmin 32.75vmin / 4vmin 3.5vmin,
+
+    radial-gradient(circle at 100% 100%, #0000 60%, var(--skin) 0) 51.75vmin 32.4vmin / 2.5% 2.5%,
+    conic-gradient(from 300deg at 100% 100%, var(--eyes) 25deg, #0000 0) 52vmin 32.5vmin / 4vmin 3.5vmin,
+
+    radial-gradient(circle at 0% 0%, #0000 60%, var(--skin) 0) 43.3vmin 31.4vmin / 2.5% 2.5%,
+    conic-gradient(from 40deg at 0% 100%, var(--eyes) 50deg, #0000 0) 42.5vmin 28vmin / 2.5vmin 5vmin,
+
+    radial-gradient(circle at 100% 0%, #0000 60%, var(--skin) 0) 34.6vmin 31.4vmin / 2.5% 2.5%,
+    conic-gradient(from 270deg at 100% 100%, var(--eyes) 50deg, #0000 0) 35vmin 28vmin / 2.5vmin 5vmin,
+
+
+    radial-gradient(circle at 50% 100%, #0000 40%, var(--skin) 0) 21.8vmin 30.5vmin /3.75% 5%,
+    conic-gradient(from 10deg at 0% 100%, var(--eyes) 30deg, #0000 0) 21.25vmin 32.5vmin / 4vmin 4vmin,
+
+    /*heads*/
+    radial-gradient(circle at 50% -10%, var(--skin) 0 10%, var(--border) 0 15%, var(--skin) 0) 50% 50vmin / 20% 20%,
+    radial-gradient(ellipse 70% 100% at 50% 90%, var(--skin) 7.5vmin, var(--border) 0 8.75vmin, #0000 0) 50% -10% / 50% 50%,
+    conic-gradient(from 337.5deg at 50% 100%, var(--skin) 45deg, #0000 0) 50% 32.75vmin / 18vmin 20vmin,
+    conic-gradient(from 337.5deg at 50% 100%, var(--border) 45deg, #0000 0) 50% 36vmin / 18vmin 20vmin,
+
+    linear-gradient(var(--skin)0 100%, var(--skin) 0) 25vmin 37vmin / 10vmin 4.3vmin,
+    radial-gradient(circle at 80% 0%, #0000 25%, var(--bg) 0) 17.2vmin 50.5vmin / 4% 3.5%,
+    radial-gradient(ellipse 50% 100% at 0% 80%, #0000 4.5vmin, var(--border) 0 6vmin, var(--skin) 0) 25.55vmin 41.2vmin / 8vmin 9vmin,
+    conic-gradient(at 0% 100%, var(--skin) 45deg, #0000 0) 20vmin 32.8vmin / 18vmin 17vmin,
+    conic-gradient(at 0% 100%, var(--border) 45deg, #0000 0) 18.8vmin 32.9vmin / 20vmin 20vmin,
+
+
+    radial-gradient(ellipse 70% 100% at 50% 110%, var(--skin) 7.5vmin, var(--border) 0 8.75vmin, #0000 0) 7vmin -7vmin / 50% 50%,
+    radial-gradient(ellipse 80% 100% at 50% 110%, var(--skin) 7.5vmin, var(--border) 0 8.75vmin, #0000 0) 32.1vmin -7vmin / 50% 50%,
+
+    radial-gradient(circle at 0% 0%, #0000 25%, var(--bg) 0) 60.7vmin 52.5vmin / 4% 3.5%,
+    conic-gradient(from 315deg at 100% 100%, var(--skin) 40deg, #0000 0) 50.5vmin 31.5vmin / 10vmin 20vmin,
+    conic-gradient(from 315deg at 100% 100%, var(--border) 40deg, #0000 0) 52vmin 32.5vmin / 10vmin 22.5vmin,
+    radial-gradient(ellipse 20% 100% at 100% 50%, #0000 2.5vmin, var(--border) 0 4vmin, var(--skin) 0) 35.5vmin 45vmin / 20vmin 17.5vmin,
+
+    linear-gradient(10deg, var(--skin) 28.5vmin, var(--border) 0 30.2vmin, #0000 0) 52vmin 49.5vmin / 6vmin 42.5vmin,
+    linear-gradient(90deg, var(--border) 1.5vmin, var(--skin) 0) 30vmin 50vmin / 23vmin 17.5vmin,
+    linear-gradient(var(--skin) 0 100%, var(--skin) 0) 31.45vmin 30vmin / 21vmin 45vmin,
+
+    /*ears borders*/ 
+    conic-gradient(from 180deg at 100% 0%, var(--border) 30deg, #0000 0) 19vmin 19vmin / 10vmin 10vmin,
+    conic-gradient(from 145deg at 0% 0%, var(--shadow) 35deg, #0000 0) 20vmin 20vmin / 10vmin 10vmin,
+    
+    conic-gradient(from 185deg at 100% 0%, var(--border) 22.5deg, #0000 0) 38vmin 16vmin / 10vmin 10vmin,    
+    conic-gradient(from 155deg at 0% 0%, var(--border) 22.5deg, #0000 0) 32vmin 16vmin / 10vmin 10vmin,
+    
+    conic-gradient(from 190deg at 100% 0%, var(--shadow) 25deg, #0000 0) 49vmin 21vmin / 10vmin 10vmin, 
+    conic-gradient(from 182deg at 100% 0%, var(--border) 20deg, #0000 0) 43vmin 18vmin / 10vmin 10vmin, 
+
+    radial-gradient(circle at center, var(--bg), 28.5vmin, var(--border) 0 30vmin, #0000 0);
+    background-repeat: no-repeat;
+}

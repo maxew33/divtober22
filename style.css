@@ -7,7 +7,7 @@
 }
 
 :root{
-  --bg: #222;
+  --bg: #fff;
   --font: #ddd;
 }
 
@@ -45,15 +45,14 @@ body{
   position: absolute;
   top: 0;
   left: 0;
-  background-repeat: no-repeat;
 }
 
 .drawing-container::after{
-  
+  background-repeat: no-repeat;  
 }
 
 .drawing-container::before{
-  
+  background-repeat: no-repeat;  
 }
 
 /* helping grid => delete it ! */
@@ -64,5 +63,8 @@ body{
   transform: translate(-50%, -50%);
   width: 80vmin;
   aspect-ratio: 1;
-  background: repeating-linear-gradient(#0000 0% 4.85%, olive 0 5%), repeating-linear-gradient(90deg, #0000 0% 4.85%, olive 0 5%), repeating-linear-gradient(#0000 0% 9.85%, orangered 0 10%), repeating-linear-gradient(90deg, #0000 0% 9.85%, orangered 0 10%) ;
-}
+  background: 
+  repeating-linear-gradient(#0000 0vmin 9.85vmin, orangered 0 10vmin),
+  repeating-linear-gradient(90deg, #0000 0vmin 9.85vmin, orangered 0 10vmin),
+  repeating-linear-gradient(#0000 0vmin 4.85vmin, olive 0 5vmin),
+  repeating-linear-gradient(90deg, #0000 0vmin 4.85vmin, olive 0vmin 5vmin);}
