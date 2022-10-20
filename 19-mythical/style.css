@@ -62,11 +62,11 @@ body {
     conic-gradient(from 155deg at 0% 0%, var(--skin) 22.5deg, #0000 0) 32.8vmin 20vmin / 8vmin 8vmin,
 
     /* eyes */
-    radial-gradient(circle at 50% 100%, #0000 50%, var(--skin) 0) 57.25vmin 32.4vmin / 1.5% 2%,
+    radial-gradient(circle at 50% 100%, #0000 50%, var(--skin) 0) 57.4vmin 32.4vmin / 1.5% 2%,
     conic-gradient(from 340deg at 50% 100%, var(--eyes) 15deg, #0000 0) 56.75vmin 32.75vmin / 4vmin 3.5vmin,
 
-    radial-gradient(circle at 100% 100%, #0000 60%, var(--skin) 0) 51.75vmin 32.4vmin / 2.5% 2.5%,
-    conic-gradient(from 300deg at 100% 100%, var(--eyes) 25deg, #0000 0) 52vmin 32.5vmin / 4vmin 3.5vmin,
+    radial-gradient(circle at 100% 100%, #0000 60%, var(--skin) 0) 51.8vmin 32.75vmin / 3.25% 3.25%,
+    conic-gradient(from 310deg at 100% 100%, var(--eyes) 25deg, #0000 0) 52vmin 33vmin / 4vmin 3.5vmin,
 
     radial-gradient(circle at 0% 0%, #0000 60%, var(--skin) 0) 43.3vmin 31.4vmin / 2.5% 2.5%,
     conic-gradient(from 40deg at 0% 100%, var(--eyes) 50deg, #0000 0) 42.5vmin 28vmin / 2.5vmin 5vmin,

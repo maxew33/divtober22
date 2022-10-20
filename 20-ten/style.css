@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: radial-gradient(circle at center, #0000 25%, #0005),
+        hsl(147deg, 50%, 23%);
+    --font: #eee;
+    --after-rotY: 0deg;
+    --before-rotY: -180deg;
+    --red: red;
+    --heart: red;
+    --h3-x: 10vmin;
+    --h3-y: 9.5vmin;
+    --h2-x: 20vmin;
+    --h2-y: 17vmin;
+    --h1: 0vmin;
+}
+
+body {
+    background: var(--bg);
+    height: 100vh;
+    font-size: 3.5vmin;
+    overflow: hidden;
+}
+
+.drawing-container {
+    position: absolute;
+    height: 80vmin;
+    width: 80vmin;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    font-family: 'Reem Kufi', sans-serif;
+    font-size: 3.5vmin;
+    perspective: 250vmin;
+    color: var(--font);
+    text-align: center;
+    line-height: 90vmin;
+    border: none;
+    background: #0000;
+}
+
+.drawing-container:focus-within {
+    --after-rotY: 180deg;
+    --before-rotY: 0deg;
+}
+
+.drawing-container::after,
+.drawing-container::before {
+    content: "";
+    padding-top: 27.5vmin;
+    height: 70vmin;
+    width: 50vmin;
+    position: absolute;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transition: transform 1s linear;
+    transform-origin: 50% 0%;
+    top: 5vmin;
+    left: 15vmin;
+    border-radius: 1.5vmin;
+    border: .5vmin solid black;
+}
+
+.drawing-container::after {
+    background:
+        red;
+    transform: rotateY(var(--after-rotY));
+    box-shadow:
+        inset 0vmin 0vmin 0vmin 1.25vmin #ddd,
+        inset 0vmin 0vmin 0vmin 1.5vmin #000;
+    background:
+        repeating-linear-gradient(300deg, #0000 0 2.25vmin, var(--red) 2.5vmin 2.75vmin),
+        repeating-linear-gradient(60deg, #fff 0 2.25vmin, var(--red) 2.5vmin 2.75vmin);
+}
+
+.drawing-container::before {
+
+    transform: rotateY(var(--before-rotY));
+
+    background:
+        /* 10 */
+        /* top left */
+        linear-gradient(300deg, var(--heart) 0 45%, #0000 0) 1.1vmin 2.4vmin / 1.5vmin 1.5vmin,
+        linear-gradient(var(--heart) 100%, #0000 0) 2.4vmin 2.4vmin / .5vmin 5vmin,
+        radial-gradient(ellipse at center, #0000 40%, var(--heart) 0 72.5%, #0000 0) 3.4vmin 2.4vmin / 1.5vmin 5vmin,
+
+        conic-gradient(from 325deg at 50% 95%, var(--heart) 70deg, #0000 0) 2.4vmin 8.75vmin / 2.15vmin 2.2vmin,
+        radial-gradient(circle at center, var(--heart) 57%, #0000 0) 2.1vmin 8vmin / 1.5vmin 1.5vmin,
+        radial-gradient(circle at center, var(--heart) 57%, #0000 0) 3.3vmin 8vmin / 1.5vmin 1.5vmin,
+
+        /* bottom right */
+        linear-gradient(120deg, var(--heart) 0 45%, #0000 0) 46vmin 64.5vmin / 1.5vmin 1.5vmin,
+        linear-gradient(var(--heart) 100%, #0000 0) 45.75vmin 61vmin / .5vmin 5vmin,
+        radial-gradient(ellipse at center, #0000 40%, var(--heart) 0 72.5%, #0000 0) 43.5vmin 61vmin / 1.5vmin 5vmin,
+
+        conic-gradient(from 145deg at 50% 5%, var(--heart) 70deg, #0000 0) 44.1vmin 57.75vmin / 2.15vmin 2.2vmin,
+        radial-gradient(circle at center, var(--heart) 57%, #0000 0) 43.8vmin 59vmin / 1.5vmin 1.5vmin,
+        radial-gradient(circle at center, var(--heart) 57%, #0000 0) 45vmin 59vmin / 1.5vmin 1.5vmin,
+
+
+        /* opposite hearts */
+
+        conic-gradient(from 145deg at 50% 5%, var(--heart) 70deg, #0000 0) calc(var(--h3-x) + 10.25vmin) calc(calc(var(--h3-y) * -1) + 55.75vmin) / 7.5vmin 8vmin,
+        radial-gradient(circle at center, var(--heart) 57%, #0000 0) calc(var(--h3-x) + 13.5vmin) calc(calc(var(--h3-y) * -1) + 60.25vmin) / 5vmin 5vmin,
+        radial-gradient(circle at center, var(--heart) 57%, #0000 0) calc(var(--h3-x) + 9.5vmin) calc(calc(var(--h3-y) * -1) + 60.25vmin) / 5vmin 5vmin,
+
+        conic-gradient(from 145deg at 50% 5%, var(--heart) 70deg, #0000 0) calc(var(--h2-x) + 10.25vmin) calc(calc(var(--h2-y) * -1) + 55.75vmin) / 7.5vmin 8vmin,
+        radial-gradient(circle at center, var(--heart) 57%, #0000 0) calc(var(--h2-x) + 13.5vmin) calc(calc(var(--h2-y) * -1) + 60.25vmin) / 5vmin 5vmin,
+        radial-gradient(circle at center, var(--heart) 57%, #0000 0) calc(var(--h2-x) + 9.5vmin) calc(calc(var(--h2-y) * -1) + 60.25vmin) / 5vmin 5vmin,
+
+        conic-gradient(from 145deg at 50% 5%, var(--heart) 70deg, #0000 0) calc(var(--h2-x) + 10.25vmin) 55.75vmin / 7.5vmin 8vmin,
+        radial-gradient(circle at center, var(--heart) 57%, #0000 0) calc(var(--h2-x) + 13.5vmin) 60.25vmin / 5vmin 5vmin,
+        radial-gradient(circle at center, var(--heart) 57%, #0000 0) calc(var(--h2-x) + 9.5vmin) 60.25vmin / 5vmin 5vmin,
+
+        conic-gradient(from 145deg at 50% 5%, var(--heart) 70deg, #0000 0) 10.25vmin calc(calc(var(--h2-y) * -1) + 55.75vmin) / 7.5vmin 8vmin,
+        radial-gradient(circle at center, var(--heart) 57%, #0000 0) 13.5vmin calc(calc(var(--h2-y) * -1) + 60.25vmin) / 5vmin 5vmin,
+        radial-gradient(circle at center, var(--heart) 57%, #0000 0) 9.5vmin calc(calc(var(--h2-y) * -1) + 60.25vmin) / 5vmin 5vmin,
+
+        conic-gradient(from 145deg at 50% 5%, var(--heart) 70deg, #0000 0) 10.25vmin 55.75vmin / 7.5vmin 8vmin,
+        radial-gradient(circle at center, var(--heart) 57%, #0000 0) 13.5vmin 60.25vmin / 5vmin 5vmin,
+        radial-gradient(circle at center, var(--heart) 57%, #0000 0) 9.5vmin 60.25vmin / 5vmin 5vmin,
+
+        /* hearts */
+
+        conic-gradient(from 325deg at 50% 95%, var(--heart) 70deg, #0000 0) calc(var(--h3-x) + 10.25vmin) calc(var(--h3-y) + 4.75vmin) / 7.5vmin 8vmin,
+        radial-gradient(circle at center, var(--heart) 57%, #0000 0) calc(var(--h3-x) + 13.5vmin) calc(var(--h3-y) + 3.25vmin) / 5vmin 5vmin,
+        radial-gradient(circle at center, var(--heart) 57%, #0000 0) calc(var(--h3-x) + 9.5vmin)calc(var(--h3-y) + 3.25vmin) / 5vmin 5vmin,
+
+        conic-gradient(from 325deg at 50% 95%, var(--heart) 70deg, #0000 0) calc(var(--h1) + 10.25vmin) calc(var(--h2-y) + 4.75vmin) / 7.5vmin 8vmin,
+        radial-gradient(circle at center, var(--heart) 57%, #0000 0) calc(var(--h1) + 13.5vmin) calc(var(--h2-y) + 3.25vmin) / 5vmin 5vmin,
+        radial-gradient(circle at center, var(--heart) 57%, #0000 0) calc(var(--h1) + 9.5vmin)calc(var(--h2-y) + 3.25vmin) / 5vmin 5vmin,
+
+        conic-gradient(from 325deg at 50% 95%, var(--heart) 70deg, #0000 0) calc(var(--h2-x) + 10.25vmin) calc(var(--h1) + 4.75vmin) / 7.5vmin 8vmin,
+        radial-gradient(circle at center, var(--heart) 57%, #0000 0) calc(var(--h2-x) + 13.5vmin) calc(var(--h1) + 3.25vmin) / 5vmin 5vmin,
+        radial-gradient(circle at center, var(--heart) 57%, #0000 0) calc(var(--h2-x) + 9.5vmin)calc(var(--h1) + 3.25vmin) / 5vmin 5vmin,
+
+        conic-gradient(from 325deg at 50% 95%, var(--heart) 70deg, #0000 0) calc(var(--h2-x) + 10.25vmin) calc(var(--h2-y) + 4.75vmin) / 7.5vmin 8vmin,
+        radial-gradient(circle at center, var(--heart) 57%, #0000 0) calc(var(--h2-x) + 13.5vmin) calc(var(--h2-y) + 3.25vmin) / 5vmin 5vmin,
+        radial-gradient(circle at center, var(--heart) 57%, #0000 0) calc(var(--h2-x) + 9.5vmin)calc(var(--h2-y) + 3.25vmin) / 5vmin 5vmin,
+
+
+        conic-gradient(from 325deg at 50% 95%, var(--heart) 70deg, #0000 0) 10.25vmin 4.75vmin / 7.5vmin 8vmin,
+        radial-gradient(circle at center, var(--heart) 57%, #0000 0) 13.5vmin 3.25vmin / 5vmin 5vmin,
+        radial-gradient(circle at center, var(--heart) 57%, #0000 0) 9.5vmin 3.25vmin / 5vmin 5vmin,
+
+        #fff;
+    background-repeat: no-repeat;
+}
