@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #51f;
+  --font: gold;
+  --border: black;
+  --feathers: ivory;
+  --red: red;
+  --yellow: yellow;
+  --floor: rgb(85, 181, 85);
+  --legs: orangered;
+  --angle-thrown: -90deg;
+  --hen-stand: 8vmin;
+}
+
+body {
+  background: var(--bg);
+  height: 100vh;
+  font-size: 3.5vmin;
+  overflow: hidden;
+}
+
+.drawing-container {
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vmin;
+  width: 80vmin;
+  display: grid;
+  place-content: center;
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 3.5vmin;
+  color: var(--font);
+  text-align: center;
+  line-height: 90vmin;
+  background:
+  /* legs */
+  linear-gradient(var(--legs) 100%, #0000 0) 35vmin 65vmin / 1vmin 5vmin,
+  linear-gradient(var(--legs) 100%, #0000 0) 32vmin 65vmin  / 1vmin 5vmin,
+  /* floor */
+  linear-gradient(#0000 0 85%, var(--border) 0 85.5%, var(--floor) 0),
+    var(--bg);
+  background-repeat: no-repeat;
+}
+
+.drawing-container::after,
+.drawing-container::before {
+  content: "";
+  height: 80vmin;
+  width: 80vmin;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.drawing-container::after {
+  transform: translateY(var(--hen-stand));
+  background:
+
+    /* wing */
+    linear-gradient(var(--border) 100%, #0000 0) 22.25vmin 44.75vmin / .75vmin 2.75vmin,
+    linear-gradient(var(--border) 100%, #0000 0) 29.5vmin 44.75vmin / 2.5vmin .75vmin,
+    radial-gradient(circle at 0% 50%, #0000 0 25%, var(--border) 0 42%, #0000 0) 31.75vmin 44.75vmin / 3.5vmin 3.5vmin,
+    linear-gradient(var(--border) 100%, #0000 0) 30vmin 47.75vmin / 4.5vmin .75vmin,
+    radial-gradient(circle at 0% 50%, #0000 0 25%, var(--border) 0 42%, #0000 0) 34.25vmin 47.75vmin / 3.5vmin 3.5vmin,
+    linear-gradient(var(--border) 100%, #0000 0) 32vmin 50.75vmin / 4.5vmin .75vmin,
+    radial-gradient(circle at 0% 50%, #0000 0 25%, var(--border) 0 42%, #0000 0) 36.25vmin 50.75vmin / 3.5vmin 3.5vmin,
+    linear-gradient(var(--border) 100%, #0000 0) 29vmin 53.5vmin / 7.5vmin .75vmin,
+    radial-gradient(circle at 100% 0%, #0000 0 45%, var(--border) 0 50%, #0000 0) 19.5vmin 47vmin / 10vmin 10vmin,
+
+    /* eye */
+    radial-gradient(circle at 16.75vmin 31.5vmin, #fff .25%, #0000 0),
+    radial-gradient(circle at 17.5vmin 30.5vmin, #fff .5%, #0000 0),
+    radial-gradient(circle at 17vmin 31vmin, var(--border) 2%, #0000 0),
+
+    /* head */
+    radial-gradient(ellipse 80% 100% at 50% 105%, var(--feathers) 38%, var(--border) 0 42%, #0000 0) 7vmin 9.25vmin / 25vmin 25vmin,
+    linear-gradient(var(--feathers) 100%, #0000 0) 12vmin 34vmin / 15vmin 10vmin,
+
+    /* back */
+    conic-gradient(from 270deg at 100% 100%, var(--feathers) 13deg, #0000 0) 25vmin 25vmin / 16.5vmin 15.25vmin,
+
+    radial-gradient(ellipse 100% 25% at 100% 0%, #0000 0 80%, var(--feathers) 0 90%, #0000 0) 21.5vmin 34.25vmin / 27.5vmin 27.5vmin,
+    radial-gradient(ellipse 100% 25% at 100% 0%, #0000 0 80%, var(--border) 0 90%, #0000 0) 22.25vmin 34vmin / 27.5vmin 27.5vmin,
+
+    /* crest */
+    linear-gradient(var(--red) 100%, #0000 0) 19vmin 23.25vmin / 4.1vmin 1.5vmin,
+    radial-gradient(circle at 50% 100%, var(--red) 27%, var(--border) 0 42%, #0000 0) 19vmin 19.25vmin / 4.25vmin 4.25vmin,
+    radial-gradient(ellipse 100% 50% at 50% 0%, var(--red) 32%, var(--border) 0 41%, #0000 0) 16vmin 24.5vmin / 10vmin 10vmin,
+    radial-gradient(circle at 0% 100%, var(--red) 45%, var(--border) 0 75%, #0000 0) 23vmin 22.75vmin / 2vmin 2vmin,
+    radial-gradient(ellipse 70% 100% at center, var(--red) 20.5%, var(--border) 0 45%, #0000 0) 16vmin 21.5vmin / 5vmin 5vmin,
+
+    /* beak */
+    conic-gradient(from 70deg at 0% 50%, var(--yellow) 35deg, #0000 0) 9.5vmin 34vmin / 2vmin 2.5vmin,
+    conic-gradient(from 70deg at 0% 50%, var(--border) 35deg, #0000 0) 7.5vmin 33.5vmin / 4vmin 4vmin,
+
+    conic-gradient(from 180deg at 100% 0%, var(--red) 20deg, #0000 0) 7.75vmin 36.5vmin / 3.5vmin 3.5vmin,
+    conic-gradient(from 180deg at 100% 0%, var(--border) 20deg, #0000 0) 5vmin 33vmin / 7vmin 7vmin,
+    radial-gradient(circle at 50% 0%, var(--red) 20%, var(--border) 0 45%, #0000 0) 9.25vmin 40vmin / 2.5vmin 2.5vmin,
+
+    /* bottom */
+    radial-gradient(circle at 50% 5%, var(--feathers) 40%, var(--border) 0 42%, #0000 0) 8.75vmin 40vmin / 45vmin 45vmin,
+
+    /* tail */
+    radial-gradient(ellipse 70% 100% at 50% 100%, var(--feathers) 32%, var(--border) 0 44%, #0000 0) 46.75vmin 29.25vmin / 7.5vmin 7.5vmin,
+    conic-gradient(from 330deg at 50% 50%, var(--feathers) 50deg, #0000 0) 47.4vmin 36.5vmin / 7vmin 7vmin,
+    conic-gradient(from 330deg at 50% 50%, var(--border) 50deg, #0000 0) 46vmin 36.5vmin / 10vmin 10vmin;
+
+  background-repeat: no-repeat;
+}
+
+.drawing-container::before {
+  background-repeat: no-repeat;
+  transform: rotate(var(--angle-thrown));
+  transition: .5s transform 1s linear;
+  transform-origin: -10vmin bottom;
+  top: 57vmin;
+  left: 55vmin;
+  height: 12vmin;
+  width: 8vmin;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  background: gold;
+  box-shadow: inset 0 0 1.5vmin #fff, 0 0 1.5vmin 1.5vmin gold;
+}
+
+.drawing-container:hover{
+  --angle-thrown: 0deg;
+  --hen-stand: 3vmin;
+}
