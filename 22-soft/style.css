@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+
+*, ::before, ::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --bg: rgb(60, 136, 117);
+  --font: #ddd;
+  --red: #039;
+  --straw: #e5eeef;
+  --top: #acdce9;
+  --top-shadow: #74bbd7;
+  --beam: #ff7;
+}
+
+body{
+  background: var(--bg);
+  height: 100vh;
+  font-size: 3.5vmin;
+  overflow: hidden;
+}
+
+.drawing-container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vmin;
+  width: 80vmin;
+  display: grid;
+  place-content: center;
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 3.5vmin;
+  color: var(--font);
+  text-align: center;
+  line-height: 90vmin;
+  border-radius: 50%;
+  background: 
+  radial-gradient(circle at 50% 65%, #0000 13% , whitesmoke 0% 14%, orange 15% 17%, #0000 17.5%),
+  conic-gradient(from 112.5deg at 10% 10%, orange 45deg, #0000 0) 40vmin 52vmin / 8vmin 8vmin,
+  conic-gradient(from 157.5deg at 50% 0%, orange 45deg, #0000 0) 50% 53.5vmin / 8vmin 8vmin,
+  conic-gradient(from 202.5deg at 90% 10%, orange 45deg, #0000 0) 32vmin 52vmin / 8vmin 8vmin,
+  conic-gradient(from 247.5deg at 100% 50%, orange 45deg, #0000 0) 31vmin 48vmin / 8vmin 8vmin,
+  conic-gradient(from 292.5deg at 90% 90%, orange 45deg, #0000 0) 32vmin 44vmin / 8vmin 8vmin, 
+  conic-gradient(from 337.5deg at 50% 100%, orange 45deg, #0000 0) 50% 42.5vmin / 8vmin 8vmin,
+  conic-gradient(from 22.5deg at 10% 90%, orange 45deg, #0000 0) 40vmin 44vmin / 8vmin 8vmin, 
+  conic-gradient(from 67.5deg at 0% 50%, orange 45deg, #0000 0) 41vmin 48vmin / 8vmin 8vmin,
+  radial-gradient(circle at 50% 65%, whitesmoke 15%, #0000 0),
+
+  conic-gradient(from 25deg, grey 5deg, #0000 0 32.5deg, grey 0 37.5deg, #0000 0 60deg, grey 0 65deg, #0000 0) 35.25vmin 10vmin / 6vmin 5.5vmin,
+  linear-gradient(27deg, #0000 25%, var(--straw) 0 50%, #0000 0 75%) 31vmin 2.5vmin / 10vmin 10vmin,
+  radial-gradient(circle at 0% 100%, var(--straw) 50%, #0000 0) 40.5vmin 9.5vmin / 1.5vmin 1.5vmin,
+  radial-gradient(ellipse 100% 50% at 50% 0%, #0000 0%, var(--straw) 0 70%, #0000 0) 50% 30.5vmin/ 3.5vmin 3.5vmin,
+  linear-gradient(var(--straw) 100%, #0000 0) 50% 11vmin / 3.5vmin 20vmin,
+  radial-gradient(ellipse 100% 10% at 50% 50%, var(--top) 50%, #0000 0) 50% 11.5vmin / 38vmin 38vmin,
+  radial-gradient(circle at 0% 50%, var(--top-shadow) 40%, #0000 0) 59.5vmin 29vmin / 3vmin 4vmin,
+  radial-gradient(circle at 100% 50%, var(--top-shadow) 40%, #0000 0) 17.5vmin 29vmin / 3vmin 4vmin,
+  radial-gradient(ellipse 100% 20% at 50% 110%, var(--top-shadow) 75%, #0000 0) 20vmin -10vmin / 40vmin 40vmin,
+  radial-gradient(ellipse 100% 30% at 50% -10%, var(--top-shadow) 75%, #0000 0) 20vmin 29.75vmin / 40vmin 40vmin,
+  radial-gradient(ellipse 100% 30% at 50% -10%, var(--red) 46%, #0000 0) 20vmin 70vmin / 40vmin 40vmin,
+  conic-gradient(from 351deg at 50% 300%, var(--red) 18deg, #0000 0) 20vmin 30vmin / 40vmin 40vmin,
+  radial-gradient(circle at center, #0000 0 25%, var(--bg) 70%),
+  repeating-conic-gradient(#0000 0deg 15deg, var(--beam) 15deg 22.5deg),
+    var(--bg);
+  background-repeat: no-repeat;
+}
+
+.drawing-container::after, 
+.drawing-container::before{
+  content: "";
+  height: 80vmin;
+  width: 80vmin;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.drawing-container::after{
+    content: "";
+    height: 80vmin;
+    width: 80vmin;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.drawing-container::before{
+  background-repeat: no-repeat;  
+}
