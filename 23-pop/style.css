@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #772e5b;
+  /* #772e5b
+  #fc7a00
+  #ec3960 */
+  --font: #ddd;
+  --yellow: #fdf900;
+  --floor: #a5e803;
+  --blue: #15a3e5;
+  --frame: #fc7a00;
+  --green: #80c56a;
+  --border: black;
+}
+
+body {
+  background:
+    var(--bg);
+  height: 100vh;
+  font-size: 3.5vmin;
+  overflow: hidden;
+}
+
+.drawing-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vmin;
+  width: 80vmin;
+  display: grid;
+  place-content: center;
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 3.5vmin;
+  color: var(--font);
+  text-align: center;
+  line-height: 90vmin;
+  box-shadow: 0 0 0 .5vmin var(--border), 0 0 0 2.5vmin var(--frame), 0 0 0 3vmin var(--border);
+
+}
+
+.drawing-container::after {
+  content: "";
+  height: 80vmin;
+  width: 80vmin;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background:
+    /* blue guy */
+
+    /* movement  */
+    /* top-right */
+    radial-gradient(circle at -30% 200%, #0000 64%, var(--border) 0 72%, #0000 0) 44vmin 10.5vmin / 3.5vmin 3.5vmin no-repeat,
+    radial-gradient(circle at 0% 200%, #0000 61%, var(--border) 0 66%, #0000 0) 39vmin 9vmin / 7.5vmin 7.5vmin no-repeat,
+    radial-gradient(circle at 0% 200%, #0000 61%, var(--border) 0 68%, #0000 0) 40vmin 13.5vmin / 5vmin 5vmin no-repeat,
+    /* top left */
+    radial-gradient(circle at 200% 200%, #0000 75%, var(--border) 0 81%, #0000 0) 10vmin 10.5vmin / 5vmin 5vmin no-repeat,
+    radial-gradient(circle at 200% 200%, #0000 76%, var(--border) 0 80%, #0000 0) 10.5vmin 11vmin / 7.5vmin 7.5vmin no-repeat,
+    radial-gradient(circle at 200% 200%, #0000 75%, var(--border) 0 81%, #0000 0) 13vmin 13.5vmin / 5vmin 5vmin no-repeat,
+    /* bottom */
+    radial-gradient(ellipse 50% 100% at 0% 50%, #0000 20%, var(--border) 0 90%, #0000 0) 43vmin 65.5vmin / 2vmin 2.5vmin no-repeat,
+    radial-gradient(ellipse 50% 100% at 0% 50%, #0000 20%, var(--border) 0 90%, #0000 0) 39vmin 66vmin / 2vmin 1.75vmin no-repeat,
+    radial-gradient(ellipse 50% 100% at 0% 50%, #0000 20%, var(--border) 0 90%, #0000 0) 41vmin 65vmin / 2vmin 3vmin no-repeat,
+
+    /* head */
+    linear-gradient(var(--blue) 100%, #0000 0) 38.5vmin 30vmin / 3.5vmin 3vmin no-repeat,
+    radial-gradient(ellipse 100% 80% at 39vmin 28vmin, var(--blue) 4vmin, var(--border) 0 5vmin, #0000 0),
+    radial-gradient(circle at 41.8vmin 30.5vmin, var(--blue) 4%, #0000 0),
+
+    linear-gradient(184deg, var(--blue) 50%, var(--border) 0 70%, #0000 0) 39.6vmin 43vmin / 3.5vmin 5vmin no-repeat,
+
+    /* right leg */
+    radial-gradient(ellipse 100% 100% at 0% 80%, var(--blue) 47%, #0000 0) 44vmin 15vmin / 5vmin 45vmin no-repeat,
+    radial-gradient(ellipse 100% 100% at 0% 80%, var(--blue) 30%, var(--border) 0 47%, #0000 0) 45vmin 15vmin / 5vmin 45vmin no-repeat,
+    linear-gradient(20deg, var(--blue) 50%, var(--border) 0 65%, #0000 0) 46vmin 60vmin / 6vmin 3vmin no-repeat,
+    linear-gradient(87deg, #0000 17%, var(--border) 0 35%, var(--blue) 0 75%, #0000 0) 42vmin 45.5vmin / 5vmin 18vmin no-repeat,
+    linear-gradient(190deg, var(--blue) 50%, var(--border) 0 70%, #0000 0) 43vmin 62.5vmin / 8vmin 3vmin no-repeat,
+    radial-gradient(circle at 51vmin 63.5vmin, var(--blue) 1.5%, var(--border) 0 2.5%, #0000 0),
+
+    /* left foot */
+    linear-gradient(var(--blue) 100%, #0000 0) 36.25vmin 60vmin / 3vmin 3vmin no-repeat,
+    linear-gradient(88deg, var(--blue) 30%, var(--border)0 45%, #0000 0) 38.5vmin 46vmin / 5vmin 17.25vmin no-repeat,
+    linear-gradient(160deg, #0000 19%, var(--border) 0 32%, var(--blue) 0 60%, var(--border) 0 73%, #0000 0) 34vmin 61vmin/ 7vmin 5vmin no-repeat,
+    radial-gradient(circle at 34vmin 64.5vmin, var(--blue) 1vmin, var(--border) 0 2vmin, #0000 0),
+
+    /* left side */
+    radial-gradient(ellipse 50% 100% at 100% 0%, var(--blue) 0 150%, #0000 0) 34vmin 32vmin / 5vmin 31vmin no-repeat,
+    radial-gradient(ellipse 50% 100% at 100% 0%, var(--blue) 110%, var(--border) 0 150%, #0000 0) 33.2vmin 32vmin / 5vmin 31vmin no-repeat,
+
+    /* right arm */
+    radial-gradient(ellipse 100% 80% at 55.25vmin 15vmin, var(--blue) 2.5%, #0000 0),
+    linear-gradient(131deg, #0000 37%, var(--border) 0 41%, var(--blue) 0 52%, var(--border) 0 56%, #0000 0) 41vmin 15vmin / 15vmin 17vmin no-repeat,
+    radial-gradient(ellipse 100% 80% at 55.25vmin 15vmin, var(--blue) 2.5%, var(--border) 0 3.75%, #0000 0),
+
+    /* left arm */
+    linear-gradient(35deg, #0000 0 39%, var(--border) 0 43%, var(--blue) 0 52%, var(--border) 0 57%, #0000 0) 20.5vmin 17vmin / 15vmin 15vmin no-repeat,
+    radial-gradient(circle at 19.5vmin 19.9vmin, var(--blue) 2%, var(--border) 0 3.2%, #0000 0),
+    linear-gradient(70deg, var(--blue) 25%, var(--border) 0 40%, #0000 0) 43.25vmin 26.5vmin / 5vmin 5vmin no-repeat,
+
+    linear-gradient(var(--blue) 100%, #0000 0) 35.25vmin 31vmin / 10vmin 15.25vmin no-repeat,
+
+    /* background */
+    radial-gradient(ellipse 100% 80% at 30% 50%, black 9%, #0000 0) 0 67vmin / 10vmin 10vmin repeat-x,
+    radial-gradient(ellipse 100% 80% at 80% 50%, black 9%, #0000 0) 0 75vmin / 10vmin 10vmin repeat-x,
+    radial-gradient(ellipse 100% 80% at 20% 50%, black 8%, #0000 0) 0 79vmin / 10vmin 10vmin repeat-x,
+    radial-gradient(ellipse 100% 80% at 60% 50%, black 9%, #0000 0) 0 70vmin / 10vmin 10vmin repeat-x,
+    radial-gradient(ellipse 100% 80% at 10% 50%, black 9%, #0000 0) 0 72.5vmin / 10vmin 10vmin repeat-x,
+    linear-gradient(var(--yellow) 70vmin, black 0 71vmin, var(--floor) 0),
+
+    var(--bg);
+  filter: blur(.1vmin);
+}
+
+/* helping grid => delete it ! */
+.grid2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vmin;
+  aspect-ratio: 1;
+  background:
+    repeating-linear-gradient(#0000 0vmin 9.85vmin, orangered 0 10vmin),
+    repeating-linear-gradient(90deg, #0000 0vmin 9.85vmin, orangered 0 10vmin),
+    repeating-linear-gradient(#0000 0vmin 4.85vmin, olive 0 5vmin),
+    repeating-linear-gradient(90deg, #0000 0vmin 4.85vmin, olive 0vmin 5vmin);
+}
