@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+
+*, ::before, ::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --bg: #111;
+  --font: #ddd;
+  --head: #eee;
+  --bottom: silver;
+}
+
+body{
+  background: var(--bg);
+  height: 100vh;
+  font-size: 3.5vmin;
+  overflow: hidden;
+}
+
+.drawing-container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vmin;
+  width: 80vmin;
+  display: grid;
+  place-content: center;
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 3.5vmin;
+  color: var(--font);
+  text-align: center;
+  line-height: 90vmin;
+  background: 
+  /* face */
+  radial-gradient(circle at 50% 0%, #0000 35%, rgb(239, 211, 52) 0 45%, #0000 0) 36.25vmin 45vmin / 7.5vmin 7.5vmin,
+  radial-gradient(ellipse 80% 100% at 34vmin 42vmin, rgb(239, 211, 52) 1.5vmin, #0000 0),
+  radial-gradient(ellipse 80% 100% at 46vmin 42vmin, rgb(239, 211, 52) 1.5vmin, #0000 0),
+  /* bulb */
+  radial-gradient(circle at 40vmin 30vmin, var(--head) 17.5vmin, #0000 0),
+  conic-gradient(from 330deg at 50% 175%, var(--head) 60deg, #0000 0) 25vmin 39vmin / 30vmin 15vmin,
+  /* light */
+  radial-gradient(circle at 40vmin 30vmin, #ff10 17.5vmin, #ff15 17.5vmin, #0000 30vmin, #0000 0),
+  /* bottom */
+  linear-gradient(var(--bottom) 30%, grey 35%, var(--bottom) 40% 60%, grey 65%, var(--bottom) 70%  90%, grey 95% , var(--bottom) 100%, #222 100%, #0000 0) 33.5vmin 53.8vmin / 13vmin 10vmin,
+  conic-gradient(from 330deg at 50% 250%, var(--bottom) 60deg, #0000 0) 33.5vmin 63.75vmin / 13vmin 5vmin,
+  /* arms */
+  radial-gradient(ellipse 50% 100% at 100% 100%, #0000 50%, var(--bottom) 0 60%, #0000 0) 21.75vmin 50vmin / 15% 15%,
+  radial-gradient(ellipse 50% 100% at 0% 100%, #0000 50%, var(--bottom) 0 60%, #0000 0) 46vmin 50vmin / 15% 15%,
+  /* hands */
+  radial-gradient(ellipse 70% 100% at center, var(--bottom) 50%, #0000 0) 28.5vmin 60vmin / 5% 5%,
+  radial-gradient(ellipse 70% 100% at center, var(--bottom) 50%, #0000 0) 47.5vmin 60vmin / 5% 5%,
+  /* legs */
+  radial-gradient(ellipse 50% 100% at 100% 100%, #0000 50%, var(--bottom) 0 60%, #0000 0) 20vmin 60.75vmin / 20% 20%,
+  radial-gradient(ellipse 50% 100% at 0% 100%, #0000 50%, var(--bottom) 0 60%, #0000 0) 44vmin 60.75vmin  / 20% 20%,
+  /* foots */
+  radial-gradient(ellipse 100% 50% at 50% 100%, var(--bottom) 50%, #0000 0) 27vmin 69vmin / 7.5% 10%,
+  radial-gradient(ellipse 100% 50% at 50% 100%, var(--bottom) 50%, #0000 0) 47vmin 69vmin / 7.5% 10%,
+    var(--bg);
+  background-repeat: no-repeat;
+}
+
+/* helping grid => delete it ! */
+.grid2{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vmin;
+  aspect-ratio: 1;
+  background: 
+  repeating-linear-gradient(#0000 0vmin 9.85vmin, orangered 0 10vmin),
+  repeating-linear-gradient(90deg, #0000 0vmin 9.85vmin, orangered 0 10vmin),
+  repeating-linear-gradient(#0000 0vmin 4.85vmin, olive 0 5vmin),
+  repeating-linear-gradient(90deg, #0000 0vmin 4.85vmin, olive 0vmin 5vmin);}

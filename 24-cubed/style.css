@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #004;
+    --font: #ddd;
+    --face-1: #007;
+    --face-2: #00f;
+    --face-3: #fe9;
+}
+
+body {
+    background: var(--bg);
+    height: 100vh;
+    font-size: 3.5vmin;
+    overflow: hidden;
+}
+
+.drawing-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80vmin;
+    width: 80vmin;
+    display: grid;
+    place-content: center;
+    font-family: 'Reem Kufi', sans-serif;
+    font-size: 3.5vmin;
+    color: var(--font);
+    text-align: center;
+    line-height: 90vmin;
+
+}
+
+.drawing-container::after {
+    content: "";
+    height: 80vmin;
+    width: 80vmin;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(90deg);
+    background:
+        linear-gradient(45deg, #0000 20%, #00f 0 40%, #0000 0) 0 0vmin / 40vmin 10vmin repeat-x,
+        linear-gradient(135deg, #0000 20%, #007 0 40%, #0000 0) 20vmin 0vmin / 40vmin 10vmin repeat-x,
+        linear-gradient(45deg, #0000 20%, #00f 0 40%, #0000 0) 20vmin 10vmin / 40vmin 10vmin repeat-x,
+        linear-gradient(135deg, #0000 20%, #007 0 40%, #0000 0) 0vmin 10vmin / 40vmin 10vmin repeat-x,
+        linear-gradient(45deg, #0000 20%, #00f 0 40%, #0000 0) 0 20vmin / 40vmin 10vmin repeat-x,
+        linear-gradient(135deg, #0000 20%, #007 0 40%, #0000 0) 20vmin 20vmin / 40vmin 10vmin repeat-x,
+        linear-gradient(45deg, #0000 20%, #00f 0 40%, #0000 0) 20vmin 30vmin / 40vmin 10vmin repeat-x,
+        linear-gradient(135deg, #0000 20%, #007 0 40%, #0000 0) 0vmin 30vmin / 40vmin 10vmin repeat-x,
+        linear-gradient(45deg, #0000 20%, #00f 0 40%, #0000 0) 0 40vmin / 40vmin 10vmin repeat-x,
+        linear-gradient(135deg, #0000 20%, #007 0 40%, #0000 0) 20vmin 40vmin / 40vmin 10vmin repeat-x,
+        linear-gradient(45deg, #0000 20%, #00f 0 40%, #0000 0) 20vmin 50vmin / 40vmin 10vmin repeat-x,
+        linear-gradient(135deg, #0000 20%, #007 0 40%, #0000 0) 0vmin 50vmin / 40vmin 10vmin repeat-x,
+        linear-gradient(45deg, #0000 20%, #00f 0 40%, #0000 0) 0 60vmin / 40vmin 10vmin repeat-x,
+        linear-gradient(135deg, #0000 20%, #007 0 40%, #0000 0) 20vmin 60vmin / 40vmin 10vmin repeat-x,
+        linear-gradient(45deg, #0000 20%, #00f 0 40%, #0000 0) 20vmin 70vmin / 40vmin 10vmin repeat-x,
+        linear-gradient(135deg, #0000 20%, #007 0 40%, #0000 0) 0vmin 70vmin / 40vmin 10vmin repeat-x,
+        var(--face-3);
+}
