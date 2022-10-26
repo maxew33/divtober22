@@ -62,17 +62,3 @@ body{
     var(--bg);
   background-repeat: no-repeat;
 }
-
-/* helping grid => delete it ! */
-.grid2{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80vmin;
-  aspect-ratio: 1;
-  background: 
-  repeating-linear-gradient(#0000 0vmin 9.85vmin, orangered 0 10vmin),
-  repeating-linear-gradient(90deg, #0000 0vmin 9.85vmin, orangered 0 10vmin),
-  repeating-linear-gradient(#0000 0vmin 4.85vmin, olive 0 5vmin),
-  repeating-linear-gradient(90deg, #0000 0vmin 4.85vmin, olive 0vmin 5vmin);}
