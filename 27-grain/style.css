@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #FDD307;
+    --font: #fff;
+    --grain: #D86523;
+}
+
+body {
+    background: var(--bg);
+    height: 100vh;
+    font-size: 3.5vmin;
+    overflow: hidden;
+}
+
+.drawing-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-content: center;
+    font-family: 'Reem Kufi', sans-serif;
+    font-size: 3.5vmin;
+    color: var(--font);
+    text-shadow: 1px 1px black;
+    text-align: center;
+    line-height: 90vmin;
+    background:
+        /* top */
+        conic-gradient(from 153deg at 50% 80%, var(--grain) 54deg, #0000 0) -.25vmin -8vmin / 1.25vmin 1.25vmin,
+        radial-gradient(ellipse 100% 100% at 50% 0%, var(--grain) 0 1vmin, #0000 0) -.25vmin 1.85vmin / 1.25vmin 1.25vmin,
+        /* right */
+        radial-gradient(circle at 100% 100%, var(--grain) 0 1.25vmin, #0000 0) -1.5vmin -4.2vmin / 1.25vmin 1.25vmin,
+        radial-gradient(circle at 0% 0%, var(--grain) 0 1.25vmin, #0000 0) 2.25vmin 5.75vmin / 1.25vmin 1.25vmin,
+
+        radial-gradient(circle at 100% 100%, var(--grain) 0 1.25vmin, #0000 0) -1.5vmin -1.9vmin / 1.25vmin 1.25vmin,
+        radial-gradient(circle at 0% 0%, var(--grain) 0 1.25vmin, #0000 0) 2.25vmin 8vmin / 1.25vmin 1.25vmin,
+        /* left */
+        radial-gradient(circle at 0% 100%, var(--grain) 0 1.25vmin, #0000 0) 1vmin -5.25vmin / 1.25vmin 1.25vmin,
+        radial-gradient(circle at 100% 0%, var(--grain) 0 1.25vmin, #0000 0) -2.75vmin 4.7vmin / 1.25vmin 1.25vmin,
+
+        radial-gradient(circle at 0% 100%, var(--grain) 0 1.25vmin, #0000 0) 1vmin -2.8vmin / 1.25vmin 1.25vmin,
+        radial-gradient(circle at 100% 0%, var(--grain) 0 1.25vmin, #0000 0) -2.75vmin 7.1vmin / 1.25vmin 1.25vmin,
+        /* stem */
+        linear-gradient(var(--bg) 0 5%, #0000 0) 0vmin 9.5vmin,
+        linear-gradient(90deg, var(--grain) 0 2.5%, #0000 0) 2.25vmin 0vmin,
+
+        var(--bg);
+        
+    background-size: 5vmin 10vmin;
+}
