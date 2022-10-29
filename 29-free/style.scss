@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap");
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: rgb(203, 136, 136);
+  --bg-2: rgb(101, 64, 55);
+  --font: #ee9c2e;
+  --filter: #ee9c2e;
+  --ring: #ac8928;
+  --paper-1: #dbdbdd;
+  --paper-2: #d2d2ca;
+  --paper-3: #c8c9c0;
+  --broken: #0000;
+  --text: "addict";
+  --rotation: 0deg;
+}
+
+body {
+  background: var(--bg);
+  height: 100vh;
+  font-size: 3.5vmin;
+  font-family: "Reem Kufi", sans-serif;
+  overflow: hidden;
+  background: radial-gradient(circle at center, var(--bg) 50%, var(--bg-2));
+  animation: 3s freedom 1s linear infinite;
+}
+
+body::after {
+  content: var(--text);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.drawing-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vmin;
+  width: 80vmin;
+  display: grid;
+  place-content: center;
+  font-size: 3.5vmin;
+  color: var(--font);
+  text-align: center;
+  line-height: 90vmin;
+  text-shadow: 0.1vmin 0.1vmin black;
+
+  &::after,
+  &::before {
+    content: "";
+    height: 6vmin;
+    width: 34vmin;
+    position: absolute;
+    top: 37vmin;
+    background: #0075;
+    transition: transform 0.25s linear;
+  }
+
+  &::after {
+    left: 5vmin;
+    background: radial-gradient(ellipse 40% 100% at 101% 50%, var(--filter) 0.85vmin, var(--bg) 0) -2.75vmin 0 / 10% 100%
+        no-repeat,
+      conic-gradient(from 70deg at 80% 50%, var(--broken) 40deg, #0000 0) 30.6vmin 0 / 10% 10% repeat-y,
+      linear-gradient(90deg, var(--filter) 20vmin, var(--ring) 0 20.5vmin, var(--paper-1) 0 26vmin, #0000 0),
+      linear-gradient(90deg, var(--paper-2) 0 90%, var(--paper-3) 90% 100%) 0 0 / 2.5% 100% repeat-x;
+    transform: rotate(var(--rotation));
+  }
+
+  &:before {
+    left: 39vmin;
+    background: conic-gradient(from 70deg at 0 50%, #0000 40deg, var(--broken) 0) 0 0 / 10% 10% repeat-y,
+      linear-gradient(90deg, var(--paper-2) 0 90%, var(--paper-3) 90% 100%) 0 0 / 2.5% 100% repeat-x;
+    transform: rotate(calc(var(--rotation) * -1));
+  }
+}
+
+@keyframes freedom {
+  to {
+    --bg: rgb(244, 244, 190);
+    --bg-2: rgb(60, 163, 60);
+    --text: "free";
+    --rotation: -50deg;
+    --broken: var(--bg);
+  }
+}

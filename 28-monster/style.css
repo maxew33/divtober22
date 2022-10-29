@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&family=Covered+By+Your+Grace&display=swap');
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #4873aa;
+    --font: #fff;
+    --eye:  #5ea129;
+    --horn: #e2cc7a;
+    --skin: #b0bb0b;
+    --border: black;
+    --pic-bg:#90cedb;
+}
+
+body {
+    background: var(--bg);
+    height: 100vh;
+    font-size: 3.5vmin;
+    overflow: hidden;
+}
+
+.drawing-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80vmin;
+    width: 80vmin;
+    display: grid;
+    place-content: center;
+    font-family: 'Reem Kufi', sans-serif;
+    font-size: 3.5vmin;
+    color: var(--font);
+    text-align: center;
+    line-height: 90vmin;
+    background:
+
+    /* mouth */    
+    radial-gradient(ellipse 100% 70% at 0% 100%, #0000 36%, var(--border) 0 43%, #0000 0) 50.5vmin 28.5vmin / 10% 10%,
+    radial-gradient(ellipse 100% 70% at 100% 100%, #0000 36%, var(--border) 0 43%, #0000 0) 21.5vmin 28.5vmin / 10% 10%,
+    radial-gradient(ellipse 100% 70% at 50% -25%, #0000 40%, var(--border) 0 43%, #0000 0) 32vmin 43vmin / 20% 20%,
+    radial-gradient(ellipse 100% 70% at 50% -10%, #0000 40%, var(--border) 0 42.5%, #0000 0) 24vmin 35vmin / 40% 40%,
+    /* eye */
+    radial-gradient(circle .5vmin at 40.5vmin 21.5vmin, #fff 100%, #0000 0),
+    radial-gradient(circle 10vmin at center 22vmin, var(--border) 2vmin, var(--eye) 0 4vmin, var(--border) 0 4.5vmin, #fff 0 9.5vmin, var(--border) 0 10vmin, #0000 0),
+    /* body */
+    radial-gradient(ellipse 100% 70% at 50% 110%, var(--skin) 45%, var(--border) 0 48%, #0000 0) 30vmin -7vmin / 20vmin 20vmin,
+    
+    radial-gradient(circle 20vmin at center 30vmin, var(--skin) 19vmin, var(--border) 0 19.5vmin, #0000 0),
+
+    /* arms */
+    conic-gradient(from 67deg at -50% 50%, var(--border) 1.5deg, var(--skin) 0 12.5deg, var(--border) 0 14deg, #0000 0) 7vmin 27.5vmin / 25% 25%,
+    conic-gradient(from 280deg at 150% 50%, var(--border) 1.5deg, var(--skin) 0 12.5deg, var(--border) 0 14deg, #0000 0) 51.5vmin 27.5vmin / 25% 25%,
+
+    /* legs */ 
+    linear-gradient(80deg, #0000 51%, var(--border) 0 53%, var(--skin) 0 65%, var(--border) 0 67.5%, #0000 0) 20vmin 54vmin / 15vmin 15vmin,
+    conic-gradient(from 20deg at -20% 150%, var(--border) 2.5deg, var(--skin) 0 17.5deg, var(--border) 0 20deg, #0000 0) 26.5vmin 42.5vmin / 15% 15%,
+    
+    linear-gradient(100deg, #0000 51%, var(--border) 0 53%, var(--skin) 0 65%, var(--border) 0 67.5%, #0000 0) 42.75vmin 54vmin / 15vmin 15vmin,
+    conic-gradient(from 320deg at 120% 150%, var(--border) 2.5deg, var(--skin) 0 17.5deg, var(--border) 0 20deg, #0000 0) 42.5vmin 42.5vmin / 15% 15%,
+
+    /* horns */
+    linear-gradient(305deg, #0000 22%, var(--border) 0 27%, var(--pic-bg) 0) 45vmin 8.5vmin / 10vmin 10vmin,
+    linear-gradient(55deg, #0000 22%, var(--border) 0 27%, var(--pic-bg) 0) 25vmin 8.5vmin / 10vmin 10vmin,
+    radial-gradient(ellipse 5vmin 10vmin at 53vmin 15vmin, var(--horn) 2vmin, var(--border) 0 2.5vmin, #0000 0),
+    radial-gradient(ellipse 5vmin 10vmin at 27vmin 15vmin, var(--horn) 2vmin, var(--border) 0 2.5vmin, #0000 0),
+
+    linear-gradient(var(--pic-bg) 0 0) 10vmin 5vmin / 60vmin 60vmin,
+        var(--bg);
+    background-repeat: no-repeat;
+;}
+
+.drawing-container::after{
+  content: "Best regards, Bob Razowski";
+  font-family: 'Covered By Your Grace', cursive;
+  color: var(--border);
+  padding-top: 20vmin;
+  font-size: 5vmin;
+  font-weight: 700;
+  height: 70vmin;
+  width: 70vmin;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  background-repeat: no-repeat;  
+  box-shadow: inset 0 -5vmin 0 5vmin white, inset 0 0 0 5vmin white, inset 0 -5vmin 0 5.5vmin var(--border), inset 0 0 0 5.5vmin var(--border), 0 0 0 .5vmin var(--border);
+}
