@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --col1: crimson;
+    --font: #fff;
+    --col2: #fff;
+}
+
+body {
+    background: var(--col1);
+    height: 100vh;
+    font-size: 3.5vmin;
+    overflow: hidden;
+}
+
+.drawing-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80vmin;
+    width: 80vmin;
+    display: grid;
+    place-content: center;
+    font-family: 'Reem Kufi', sans-serif;
+    font-size: 3.5vmin;
+    color: var(--font);
+    text-align: center;
+    line-height: 90vmin;
+    background:
+
+        /* head */
+        /* mouth */
+        radial-gradient(ellipse 100% 70% at 50% -15%, #0000 40%, var(--col2) 0 44%, #0000 0) 38.5vmin 41.75vmin / 8% 8%,
+        radial-gradient(ellipse 1vmin .5vmin at 42vmin 42.5vmin, var(--col2) 100%, #0000 0),
+        /* nose */
+        radial-gradient(ellipse .9vmin .6vmin at 41.75vmin 39.8vmin, var(--col1) 100%, #0000 0),
+        radial-gradient(ellipse .8vmin .7vmin at 42vmin 40vmin, var(--col2) 100%, #0000 0),
+        /* eyes */
+        radial-gradient(circle at 100% 0%, #0000 0 25%, var(--col2) 0 50%, #0000 0) 37.5vmin 36.5vmin / 1vmin 1vmin,
+        radial-gradient(circle .75vmin at 39vmin 37.5vmin, var(--col2) 100%, #0000 0),
+
+        radial-gradient(circle at 0% 0%, #0000 0 25%, var(--col2) 0 50%, #0000 0) 45vmin 36.25vmin / 1vmin 1vmin,
+        radial-gradient(circle .75vmin at 44.5vmin 37.25vmin, var(--col2) 100%, #0000 0),
+
+        /* neck */
+        linear-gradient(var(--col1) 0 0) 38vmin 44vmin / 4vmin 3vmin,
+        radial-gradient(ellipse 2vmin 1.5vmin at 40vmin 46.5vmin, var(--col1) 100%, #0000 0),
+        
+        /* shirt */
+        radial-gradient(ellipse 100% 100% at -20% 55%, #0000 0 70%, var(--col2) 0 75%, #0000 0) 41.25vmin 52.5vmin / 6vmin 6vmin,
+        linear-gradient(100deg, #0000 27%, var(--col2) 0 31%, #0000 0) 40.75vmin 58.5vmin / 7.5vmin 8.5vmin,
+        radial-gradient(ellipse 50% 100% at -20% 40%, #0000 0 70%, var(--col2) 0 75%, #0000 0) 39.5vmin 48.25vmin / 6vmin 22vmin,
+        radial-gradient(circle .35vmin at 40.9vmin 52vmin, var(--col2) 100%, #0000 0),
+        radial-gradient(circle .35vmin at 41vmin 55vmin, var(--col2) 100%, #0000 0),
+        radial-gradient(circle .35vmin at 41vmin 58vmin, var(--col2) 100%, #0000 0),
+        radial-gradient(circle .35vmin at 41vmin 61vmin, var(--col2) 100%, #0000 0),
+        radial-gradient(circle .35vmin at 40.75vmin 64vmin, var(--col2) 100%, #0000 0),
+
+        /* collar */
+        conic-gradient(from 150deg at 50% 0%, var(--col1) 60deg, #0000 0) 39vmin 48.25vmin / 2vmin 2vmin,
+        radial-gradient(ellipse 2vmin 2.5vmin at 39.9vmin 47.5vmin, var(--col2) 100%, #0000 0),
+
+        /* hair-front */
+        linear-gradient(var(--col2) 0 0) 45vmin 29.6vmin / 2.5vmin 2vmin,
+        radial-gradient(ellipse 12.5vmin 10.5vmin at 102% -2%, #0000 60%, var(--col2) 0 100%, #0000 0) -32vmin 26.5vmin,
+        radial-gradient(ellipse 5.5vmin 10vmin at 0% 0%, #0000 30%, var(--col2) 0 100%, #0000 0) 33.5vmin 27.5vmin,
+
+        /* ear */
+        radial-gradient(circle at 50% 115%, #0000 35%, var(--col2) 0 50%, #0000 0) 34vmin 37vmin / 2vmin 2vmin,
+        radial-gradient(ellipse 1.6vmin 2.3vmin at 35vmin 39.5vmin, var(--col1) 100%, #0000 0),
+
+        /* face */
+        radial-gradient(ellipse 6vmin 5vmin at 41.5vmin 40vmin, var(--col1) 100%, #0000 0),
+        linear-gradient(var(--col1) 0 0) 35vmin 30vmin / 12vmin 10vmin,
+
+        /* neck */
+        radial-gradient(ellipse 8vmin 7vmin at 39vmin 54vmin, var(--col1) 100%, #0000 0),
+
+        /* hair */
+        radial-gradient(ellipse 5.1vmin 7vmin at 36vmin 34vmin, var(--col2) 100%, #0000 0),
+        radial-gradient(ellipse 8vmin 10.5vmin at 41vmin 36vmin, var(--col2) 100%, #0000 0),
+        radial-gradient(ellipse 10vmin 23.5vmin at 50% 100%, var(--col2) 100%, #0000 0) 0 -30.5vmin,
+        linear-gradient(95deg, #0000 50%, var(--col2) 0) 28vmin 35vmin / 5vmin 10vmin,
+        radial-gradient(ellipse 100% 56% at 80% 0%, var(--col2) 10vmin, #0000 0) -24vmin 49vmin,
+
+
+        /* heart */
+
+        radial-gradient(circle at 50% 0%, #0000 44%, var(--col1) 0) 38.5vmin 22.5vmin / 3vmin 3vmin,
+
+        radial-gradient(circle at center, var(--col1) 57%, #0000 0) 7vmin 5.25vmin / 35vmin 35vmin,
+        radial-gradient(circle at center, var(--col1) 57%, #0000 0) 38vmin 5.25vmin / 35vmin 35vmin,
+        conic-gradient(from 325deg at 50% 75%, var(--col1) 70deg, #0000 0) 12.5vmin 24.5vmin / 55vmin 60vmin,
+
+        radial-gradient(circle at center, var(--col2) 57%, #0000 0) 5vmin 3.25vmin / 39vmin 39vmin,
+        radial-gradient(circle at center, var(--col2) 57%, #0000 0) 36vmin 3.25vmin / 39vmin 39vmin,
+        conic-gradient(from 325deg at 50% 85%, var(--col2) 70deg, #0000 0) 12.5vmin 21.25vmin / 55vmin 60vmin,
+
+        var(--col1);
+    background-repeat: no-repeat;
+}
+
+/* helping grid => delete it ! */
+.grid2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vmin;
+    aspect-ratio: 1;
+    background:
+        repeating-linear-gradient(#0000 0vmin 9.85vmin, orangered 0 10vmin),
+        repeating-linear-gradient(90deg, #0000 0vmin 9.85vmin, orangered 0 10vmin),
+        repeating-linear-gradient(#0000 0vmin 4.85vmin, olive 0 5vmin),
+        repeating-linear-gradient(90deg, #0000 0vmin 4.85vmin, olive 0vmin 5vmin);
+}
