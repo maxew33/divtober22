@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&family=Blaka&family=Kaushan+Script&display=swap');
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #fff;
+    --font: #ddd;
+    --beer: #fabc0b;
+    --foam: #efebd8;
+    --base: #745733;
+    --bottle: #5d1b12;
+    --label-1: #be9b39;
+    --label-2: #e8d697;
+    --medals: #cba944;
+}
+
+body {
+    background: #000;
+    height: 100vh;
+    font-size: 3.5vmin;
+    overflow: hidden;
+}
+
+.drawing-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80vmin;
+    width: 80vmin;
+    display: grid;
+    place-content: center;
+    border-radius: 5vmin;
+    font-family: 'Reem Kufi', sans-serif;
+    font-size: 3.5vmin;
+    color: var(--font);
+    text-align: center;
+    line-height: 90vmin;
+    background:
+
+        /* basement */
+        radial-gradient(circle 1.5vmin at 35vmin 36.6vmin, var(--base) 100%, #0000 0),
+        linear-gradient(var(--base) 0 0) 33.5vmin 37vmin / 2vmin 2vmin,
+        linear-gradient(var(--base) 0 0) 35vmin 35vmin / 31vmin 4vmin,
+
+        linear-gradient(var(--base) 0 0) 54vmin 35vmin / 6vmin 35vmin,
+        linear-gradient(var(--base) 0 0) 30vmin 68vmin / 36vmin 4vmin,
+
+        /* glass of beer */
+        linear-gradient(72.5deg, var(--bg) 50%, #0000 0) 27vmin 7.75vmin /10vmin 20vmin,
+        linear-gradient(107.5deg, #0000 50%, var(--bg) 0) 43vmin 7.75vmin /10vmin 20vmin,
+
+        /* foam */
+        radial-gradient(ellipse 13vmin 4vmin at 40vmin 100%, var(--beer) 100%, #0000 0) 0 -59vmin,
+        radial-gradient(ellipse 15vmin 4vmin at 40vmin 100%, #0000 100%, var(--bg)) 0 -75vmin,
+        radial-gradient(ellipse 11vmin 11.5vmin at 40vmin 7vmin, var(--foam) 100%, #0000),
+        linear-gradient(var(--foam) 0 0) 29vmin 10vmin / 22vmin 10vmin,
+
+        /* bottom */
+        linear-gradient(60deg, var(--beer) 33%, var(--bg) 0) 43vmin 47.5vmin /10vmin 7.5vmin,
+        linear-gradient(120deg, var(--bg) 28%, var(--beer) 0) 32vmin 47.5vmin /10vmin 10vmin,
+
+        radial-gradient(ellipse 9vmin 10vmin at 40vmin 60vmin, var(--beer) 100%, #0000 0),
+
+        radial-gradient(ellipse 17vmin 42vmin at 51.5vmin 41vmin, var(--bg) 50%, #0000 0),
+        radial-gradient(ellipse 17vmin 42vmin at 28.5vmin 41vmin, var(--bg) 50%, #0000 0),
+
+        linear-gradient(var(--beer) 0 0) 29vmin 10vmin / 22vmin 40vmin,
+        linear-gradient(var(--beer) 0 0) 32.5vmin 20vmin / 15vmin 40vmin,
+        var(--bg);
+    background-repeat: no-repeat;
+}
+
+.drawing-container::before {
+    content: "kwak";
+    position: absolute;
+    left: 5vmin;
+    top: 9vmin;
+    height: 63vmin;
+    width: 17vmin;
+    padding-top: 1.25vmin;
+    font-family: 'Blaka', cursive;
+    font-size: 7vmin;
+    letter-spacing: .5vmin;
+    color: white;
+    text-shadow: .15vmin .15vmin 0 black, .3vmin .25vmin 0 gold;
+    background:
+        /* capsule */
+
+        linear-gradient(var(--bottle) 0 0) 50% 0 / 6vmin .5vmin,
+        conic-gradient(from 170deg at 50% 47.5%, gold 20deg, #0000 0) 50% -33.5vmin / 35vmin 35vmin,
+        conic-gradient(from 172.5deg at 50% 30%, var(--bottle) 15deg, #0000 0) 50% -32vmin / 35vmin 35vmin,
+
+        /* top */
+        linear-gradient(94deg, var(--bg) 50%, #0000 0) 20% 0 / 40% 20%,
+        linear-gradient(85deg, #0000 50%, var(--bg) 0) 80% 0 / 40% 20%,
+
+        radial-gradient(ellipse 6vmin 20vmin at 105% 10%, var(--bg) 100%, #0000 0),
+        radial-gradient(ellipse 6vmin 20vmin at -5% 10%, var(--bg) 100%, #0000 0),
+
+        /* label */
+
+        radial-gradient(ellipse 20vmin 10vmin at 50% 100%, #0000 40%, var(--label-1) 0 50%, var(--label-2) 0 75%, var(--label-1) 0 85%, #0000 0) 50% -37.5vmin,
+
+        radial-gradient(ellipse 2.4vmin 3vmin at 50% 37.5vmin, #0000 70%, #0005 0 80%, var(--medals) 0 100%, #0000 0),
+        radial-gradient(ellipse 1vmin 1.5vmin at 50.5% 37.25vmin, #333 0 100%, #0000 0),
+        radial-gradient(ellipse 2vmin 1vmin at 50% 39vmin, #333 0 100%, #0000 0),
+
+
+        radial-gradient(circle 1.25vmin at 11.5vmin 38.5vmin, var(--medals) 70%, #0005 0 80%, var(--medals) 0 100%, #0000 0),
+        radial-gradient(circle 1.25vmin at 5.25vmin 38.5vmin, var(--medals) 70%, #0005 0 80%, var(--medals) 0 100%, #0000 0),
+        radial-gradient(circle 1.25vmin at 12.75vmin 40vmin, var(--medals) 70%, #0005 0 80%, var(--medals) 0 100%, #0000 0),
+        radial-gradient(circle 1.25vmin at 4vmin 40vmin, var(--medals) 70%, #0005 0 80%, var(--medals) 0 100%, #0000 0),
+
+        linear-gradient(#fff 7%, var(--bottle) 0 93%, #fff 0) 50% 42vmin / 93% 8vmin,
+
+        linear-gradient(var(--label-2) 0 0) 50% 34vmin / 72% 30%,
+        linear-gradient(#fff 0 0) 50% 34.5vmin / 78.75% 29%,
+
+        radial-gradient(ellipse 8.5vmin 5.5vmin at 50% 35vmin, var(--label-2) 70%, #fff 0 77%, #0000 0),
+        radial-gradient(ellipse 8.5vmin 5.5vmin at 50% 52vmin, var(--label-2) 70%, #fff 0 77%, #0000 0),
+        radial-gradient(ellipse 8.5vmin 5.5vmin at 50% 34vmin, var(--label-1) 90%, #0000 0),
+        radial-gradient(ellipse 8.5vmin 5.5vmin at 50% 53vmin, var(--label-1) 90%, #0000 0),
+        linear-gradient(var(--label-1) 0 0) 50% 34vmin / 93% 30%,
+
+        linear-gradient(var(--bottle) 0 0) 50% 0 / 70% 70%,
+        radial-gradient(ellipse 8.5vmin 14vmin at 50% 100%, var(--bottle) 100%, var(--bg)) 0 -30.5vmin,
+
+        /* bottom */
+        linear-gradient(var(--bottle) 0 0) 50% 100% / 80% 50%,
+        linear-gradient(var(--bottle) 0 0) 50% 30vmin / 100% 50%,
+        radial-gradient(circle 2.5vmin at 100% 0%, var(--bottle) 100%, var(--bg) 0) -14.5vmin 61vmin / 100% 100%,
+        radial-gradient(circle 2.5vmin at 0% 0%, var(--bottle) 100%, var(--bg) 0) 14.5vmin 61vmin / 100% 100%;
+
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.drawing-container::after{
+    content:"Proud of myself and happy to achieve this challenge, \a I learned a lot with all of you, cheers ! - maxew -";
+    white-space: pre;
+    line-height: 4vmin;
+    position: absolute;
+    display: grid;
+    place-content: center;
+    top: 72vmin;
+    font-family: 'Kaushan Script', cursive;
+    color: black;
+    height: 8vmin;
+    width: 100%;
+}
