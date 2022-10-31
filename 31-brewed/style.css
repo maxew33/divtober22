@@ -8,7 +8,7 @@
 
 :root {
     --bg: #fff;
-    --font: #ddd;
+    --font: #5d1b12;
     --beer: #fabc0b;
     --foam: #efebd8;
     --base: #745733;
@@ -19,7 +19,7 @@
 }
 
 body {
-    background: #000;
+    background: #be9b39;
     height: 100vh;
     font-size: 3.5vmin;
     overflow: hidden;
@@ -143,6 +143,7 @@ body {
 .drawing-container::after{
     content:"Proud of myself and happy to achieve this challenge, \a I learned a lot with all of you, cheers ! - maxew -";
     white-space: pre;
+    font-size: 3vmin;
     line-height: 4vmin;
     position: absolute;
     display: grid;
