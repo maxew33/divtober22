@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+
+*, ::before, ::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --bg: #9999C9;
+  --font: #ddd;
+  --meat-color: #b30000;
+  --meat-shadow: #910000;
+  --meat-light: #e50000;
+  --border: #111;
+  --mouth-color: #222;
+  --eye-color: #222;
+  --eye-reflect: #ddd;
+}
+
+body{
+  background: var(--bg);
+  height: 100vh;
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 3.5vmin;
+}
+
+.drawing-container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vmin;
+  color: var(--font);
+  aspect-ratio: 1;
+  background:
+    
+/* inside borders */
+    linear-gradient(90deg, #0000 92.50%, var(--border) 0) 84% 57% / 10% 65%, 
+    linear-gradient(87.5deg, #0000 50%, var(--border) 50% 59%, #0000 0) 9.5% 79% / 10% 27%,    
+    radial-gradient(ellipse 100% 20% at 50% -7.5%, #0000 50%, var(--border) 55% 63%, #0000 0) 50% 99.25% / 30% 25%,/* mouth */
+    radial-gradient(ellipse 100% 15% at 50% 2.5%, #0000 55%, var(--mouth-color) 30% 70%, #0000 0) 47.5% 70.5% / 20% 30%,
+    radial-gradient(circle at 0% 50%, var(--mouth-color) 10%, #0000 0) 60.75% 51.75% / 5% 5%,
+    radial-gradient(circle at 100% 50%, var(--mouth-color) 10%, #0000 0) 35% 51.75% / 5% 5%,
+    
+/* shadow */  
+    linear-gradient(5deg, #0000 50%, var(--meat-color) 0) 47.5% 57.5% / 20% 20%,
+    radial-gradient(ellipse 100% 50% at 50% 50%, var(--meat-shadow) 50%, #0000 0) 47.5% 55% / 15% 15%,
+    conic-gradient(#0000 240deg, var(--meat-shadow) 250deg 285deg, #0000 0) 86.5% 18.2% / 3.75% 5%,
+    radial-gradient(ellipse 100% 120% at 0% 15%, #0000 80%, var(--meat-shadow) 0) 83.5% 55.5% / 10% 64%,
+    radial-gradient(ellipse 46% 125% at 54% 10%, #0000 61%, var(--meat-shadow) 0) 80% 82.5% / 25% 10%, 
+    radial-gradient(ellipse 100% 22.5% at 50% -7.5%, #0000 60%, var(--meat-shadow) 60% 90%, #0000 0) 50% 99.25% / 33% 27.5%,
+    radial-gradient(ellipse 90% 125% at 20% 10%, #0000 61%, var(--meat-shadow)  0) 20% 82.5% / 25% 10%,   
+
+    
+/* eyes */
+    linear-gradient(315deg, #0000 15%, var(--eye-reflect) 15% 85%, #0000 0) 23.75% 31.85% / 3.2% 3.2%,
+    radial-gradient(circle at 25% 32%, var(--eye-reflect) 1.5%, #0000 0),
+    radial-gradient(circle at 24% 33%, var(--eye-reflect) 1.5%, #0000 0),
+    radial-gradient(circle at 33% 37%, var(--eye-reflect) 1%, #0000 0),
+    radial-gradient(circle at 27.5% 35%, var(--eye-color) 8%, #0000 0),
+    
+    linear-gradient(315deg, #0000 15%, var(--eye-reflect) 15% 85%, #0000 0) 67.75% 31.85% / 3.2% 3.2%,
+    radial-gradient(circle at 67.5% 32.1%, var(--eye-reflect) 1.6%, #0000 0),
+    radial-gradient(circle at 66.5% 33%, var(--eye-reflect) 1.6%, #0000 0),
+    radial-gradient(circle at 75% 37%, #ddd 1%, #0000 0),
+    radial-gradient(circle at 70% 35%, var(--eye-color) 8%, #0000 0),
+    
+/* arms */
+    radial-gradient(ellipse 90% 100% at 0% 0%, var(--meat-shadow) 100%, #0000 0) 94.7% 68.9% / 11% 11%,
+    linear-gradient(-120deg, #0000 0 65%, var(--meat-shadow) 0 ) 94% 45% / 10% 30%,
+    
+    radial-gradient(ellipse 90% 100% at 100% 0%, var(--meat-color) 100%, #0000 0) 4.8% 68.9% / 11% 11%,
+    linear-gradient(120deg, #0000 0 65%, var(--meat-color) 0 ) 5.5% 45% / 10% 30%,
+    
+/* legs */
+    radial-gradient(ellipse 100% 20% at 50% -7.5%, var(--meat-shadow) 63%, #0000 0) 80% 112% / 25% 25%,
+    linear-gradient(var(--meat-color) 0 100%) 80% 82.5% / 25% 10%,
+    
+    radial-gradient(ellipse 100% 20% at 50% -7.5%, var(--meat-shadow) 63%, #0000 0) 20% 112% / 25% 25%,
+    linear-gradient(var(--meat-color) 0 100%) 20% 82.5% / 25% 10%,
+    
+/* body */    
+    radial-gradient(ellipse 100% 20% at 50% 107.5%, var(--meat-color) 63%, #0000 0) 50% -167% / 70% 70%,
+    radial-gradient(ellipse 100% 20% at 50% -7.5%, var(--meat-color) 63%, #0000 0) 50% 99.25% / 25% 25%,
+    radial-gradient(ellipse 100% 70% at 100% 100%, var(--meat-color) 75%, #0000 0) 11.5% 18.2% / 5% 5%,
+    linear-gradient(87.5deg, #0000 50%, var(--meat-color) 0) 9.5% 57.5% / 10% 61.5%,
+    linear-gradient(var(--meat-color) 0 100%) 50% 44% / 70% 55%,   
+    
+/* borders */
+    /* right side */
+    radial-gradient(ellipse 100% 80% at 0% 100%, var(--border) 50%, #0000 0) 86.5% 18% / 2.5% 2.5%,
+    radial-gradient(ellipse 90% 100% at 0% 0%, var(--border) 100%, #0000 0) 95.5% 69.5% / 12% 12%,
+    linear-gradient(-120deg, #0000 0 62%, var(--border) 0 ) 94% 45% / 10% 30%,
+    /* bottom */
+    linear-gradient(90deg, var(--border) 50%, #0000 0) 65.75% 83% / 10% 10%,
+    linear-gradient(90deg, var(--border) 50%, #0000 0) 39.75% 83% / 10% 10%,
+    radial-gradient(ellipse 100% 20% at 50% -7.5%, var(--border) 75%, #0000 0) 80.5% 113.5% / 26% 26%, 
+    radial-gradient(ellipse 100% 20% at 50% -7.5%, var(--border) 75%, #0000 0) 19% 113.5% / 26% 26%,
+    /* left side */
+    radial-gradient(ellipse 90% 100% at 100% 0%, var(--border) 100%, #0000 0) 3.55% 70.05% / 12% 12%,
+    linear-gradient(120deg, #0000 0 65%, var(--border) 0 ) 4.25% 45.5% / 10% 30%,
+    linear-gradient(87.5deg, #0000 50%, var(--border) 0) 8% 45% / 10% 53%,
+    /* head */
+    radial-gradient(ellipse 100% 70% at 100% 100%, var(--border) 85%, #0000 0) 10.8% 17.5% / 5% 5%,
+    radial-gradient(ellipse 100% 25% at 50% 107.5%, var(--border) 65%, #0000 0) 45% -172% / 72% 71%,
+    
+    #0000;
+  background-repeat: no-repeat;
+}
+
+.drawing-container::before, .drawing-container::after{  
+  color: var(--font);
+  font-size: 4.5vmin;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.drawing-container::before{
+  content:'divtober #6: meaty';
+  top: -5vmin;
+}
+
+.drawing-container::after{
+  content:'by maxew';
+  bottom: -10vmin;
+}

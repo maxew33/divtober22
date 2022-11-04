@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+
+*, ::before, ::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --ring: gold;
+  --star: hsl(45deg, 75%, 45%);
+  --bg: #222;
+  --font: #ddd;
+}
+
+body{
+  background: var(--bg);
+  height: 100vh;
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 3.5vmin;
+}
+
+.drawing-container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vmin;
+  color: var(--font);
+  aspect-ratio: 1;
+  background: 
+    radial-gradient(circle at 50% 11%, var(--ring) 5%, #0000 0),
+    radial-gradient(circle at 6.5% 41%, var(--ring) 4.25%, #0000 0),
+    radial-gradient(circle at 93.5% 41%, var(--ring) 4.25%, #0000 0),
+    radial-gradient(circle at 23% 85%, var(--ring) 4%, #0000 0),
+    radial-gradient(circle at 77% 85%, var(--ring) 4%, #0000 0),
+    conic-gradient(at 100% 100%, #0000 0deg 300deg, var(--star) 30deg 340deg, #0000 0) 59% 70% / 38% 40%,  
+    conic-gradient(at 0% 100%, #0000 0deg 20deg, var(--star) 20deg 60deg, #0000 0) 40% 70% / 38% 40%, 
+    conic-gradient(at 90% 0%, #0000 0 240deg, var(--star) 240deg 270deg, #0000 0) 90% 70% / 50% 40%,
+    conic-gradient(at 10% 0, var(--star) 90deg 120deg, #0000 0) 10% 70% / 50% 40%, 
+    conic-gradient(at 50% 0%, #0000 160deg, var(--star) 160deg 200deg, #0000 0) 50% 25% / 50% 40%,
+    radial-gradient(circle at 50% 52.5%, #0000 30%, var(--ring) 30% 40%, #0000 0),
+    #0000;
+  background-repeat: no-repeat;
+}
+
+.drawing-container::before{
+  position: absolute;
+  content:'divtober #1: badge';
+  top: -5vmin;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.drawing-container::after{
+  position: absolute;
+  content:'by maxew';
+  bottom: -5vmin;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+
+*, ::before, ::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --border: #C78C53;
+  --bretzel: #DC9D55;
+  --salt: #ccc;
+  --bg: #222;
+  --font: #ddd;
+}
+
+body{
+  background: var(--bg);
+  height: 100vh;
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 3.5vmin;
+}
+
+.drawing-container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vmin;
+  color: var(--font);
+  aspect-ratio: 1;
+  background: 
+    /*salt*/
+    radial-gradient(circle, var(--salt) 20%, #0000 0) 55% 66.5% / 10% 10%,
+    radial-gradient(circle, var(--salt) 20%, #0000 0) 40% 70% / 10% 10%,
+    radial-gradient(circle, var(--salt) 20%, #0000 0) 48% 36% / 10% 10%,
+    radial-gradient(circle, var(--salt) 20%, #0000 0) 57% 55% / 10% 10%,
+    radial-gradient(circle, var(--salt) 20%, #0000 0) 40% 45% / 10% 10%,
+    radial-gradient(circle, var(--salt) 20%, #0000 0) 73% 55% / 10% 10%,
+    radial-gradient(circle, var(--salt) 20%, #0000 0) 65% 35% / 10% 10%,
+    radial-gradient(circle, var(--salt) 20%, #0000 0) 60% 42% / 10% 10%,
+    radial-gradient(circle, var(--salt) 20%, #0000 0) 52% 72.5% / 10% 10%,
+    radial-gradient(circle, var(--salt) 20%, #0000 0) 30% 60% / 10% 10%,
+    radial-gradient(circle, var(--salt) 20%, #0000 0) 25% 50% / 10% 10%,
+    radial-gradient(circle, var(--salt) 20%, #0000 0) 37.5% 34% / 10% 10%,
+    /* */
+    radial-gradient(circle at 110% 50%, var(--bretzel) 12.5%, var(--border) 12.5% 25%, #0000 0) 22.5% 77% / 15% 16.5%,
+    linear-gradient(-35deg, #0000 46.5%, var(--border) 46.5% 49%, var(--bretzel) 48% 53%, var(--border) 53% 56%, #0000 0) 42.5% 160% / 20% 85%,
+    radial-gradient(circle at -10% 50%, var(--bretzel) 12.5%, var(--border) 12.5% 25%, #0000 0) 78% 77% / 15% 16.5%,
+    radial-gradient(circle at -25% -10%, #0000 20%, var(--border) 20% 24%, var(--bretzel) 24% 30%, var(--border) 30% 34%, #0000 0) 79.5% 74.5% / 33% 33%, 
+    /* */
+    linear-gradient(35deg, #0000 46.5%, var(--border) 46.5% 49%, var(--bretzel) 48% 53%, var(--border) 53% 56%, #0000 0) 58% 160% / 20% 85%,
+    radial-gradient(circle at 125% -10%, #0000 20%, var(--border) 20% 24%, var(--bretzel) 24% 30%, var(--border) 30% 34%, #0000 0) 20.5% 74.5% / 33% 33%,
+    /* */
+    radial-gradient(circle at 50% 100%, #0000 20%, var(--border) 20% 24%, var(--bretzel) 24% 30%, var(--border) 30% 34%, #0000 0) 61% 0% / 50% 50%,
+    radial-gradient(circle at 50% 100%, #0000 20%, var(--border) 20% 24%, var(--bretzel) 24% 30%, var(--border) 30% 34%, #0000 0) 39% 0% / 50% 50%,
+    radial-gradient(circle at 50% 0%, #0000 30%, var(--border) 30% 34%, var(--bretzel) 34% 40%, var(--border) 40% 44%, #0000 0) 50% 100% / 50% 50%,
+    #0000;
+  background-repeat: no-repeat;
+}
+
+.drawing-container::before{
+  position: absolute;
+  content:'divtober #3: snack';
+  top: -5vmin;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.drawing-container::after{
+  position: absolute;
+  content:'by maxew';
+  bottom: -7.5vmin;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}0% 9.85%, #ddd5 0 10%) ;
+}

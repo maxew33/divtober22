@@ -6,65 +6,6 @@
   box-sizing: border-box;
 }
 
-:root{
-  --bg: #fff;
-  --font: #ddd;
+h1{
+  font-size:22rem;
 }
-
-body{
-  background: var(--bg);
-  height: 100vh;
-  font-size: 3.5vmin;
-  overflow: hidden;
-}
-
-.drawing-container{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 80vmin;
-  width: 80vmin;
-  display: grid;
-  place-content: center;
-  font-family: 'Reem Kufi', sans-serif;
-  font-size: 3.5vmin;
-  color: var(--font);
-  text-align: center;
-  line-height: 90vmin;
-  background: 
-    var(--bg);
-  background-repeat: no-repeat;
-}
-
-.drawing-container::after, 
-.drawing-container::before{
-  content: "";
-  height: 80vmin;
-  width: 80vmin;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.drawing-container::after{
-  background-repeat: no-repeat;  
-}
-
-.drawing-container::before{
-  background-repeat: no-repeat;  
-}
-
-/* helping grid => delete it ! */
-.grid{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80vmin;
-  aspect-ratio: 1;
-  background: 
-  repeating-linear-gradient(#0000 0vmin 9.85vmin, orangered 0 10vmin),
-  repeating-linear-gradient(90deg, #0000 0vmin 9.85vmin, orangered 0 10vmin),
-  repeating-linear-gradient(#0000 0vmin 4.85vmin, olive 0 5vmin),
-  repeating-linear-gradient(90deg, #0000 0vmin 4.85vmin, olive 0vmin 5vmin);}

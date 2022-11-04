@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+
+*, ::before, ::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --bg: #222;
+  --font: #ddd;
+  --dot-color: #ddd;
+  --dot-x: 0%;
+  --dot-1-y: 80%;
+  --dot-2-y: 80%;
+  --dot-3-y: 80%;
+  --dot-scale: 1;
+  --angry-dot-color: var(--dot-color);
+  --angry-dot-x: -45%;
+  --text: var(--bg);
+  --bubble: var(--bg);
+}
+
+body{
+  background: var(--bg);
+  height: 100vh;
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 3.5vmin;
+}
+
+.drawing-container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--text);
+/*   color: whitesmoke; */
+/*   --bubble: whitesmoke; */
+  display: grid;
+  place-content: center;
+  padding: 0 0 55vmin 20vmin;
+  font-size: 10vmin;
+  width: 80vmin;
+  aspect-ratio: 1;
+  background: conic-gradient(at 0% 100%, #0000 0deg 20deg, var(--bubble) 20deg 60deg, #0000 0) 27.5% 22.5% / 15% 12.5%,
+    radial-gradient(ellipse 80% 30% at 60% 15%, var(--bubble) 50%, #0000 50% 0),
+    radial-gradient(circle, var(--angry-dot-color) 70%, #0000 0) var(--angry-dot-x) 40% / 28% 28%,
+    radial-gradient(circle, var(--dot-color) 70%, #0000 0) calc(var(--dot-x) + 85%) var(--dot-3-y) / calc(var(--dot-scale) * 20%) calc(var(--dot-scale) * 20%),
+    radial-gradient(circle, var(--dot-color) 70%, #0000 0) calc(var(--dot-x) + 50%) var(--dot-2-y) / calc(var(--dot-scale) * 20%) calc(var(--dot-scale) * 20%),
+    radial-gradient(circle, var(--dot-color) 70%, #0000 0) calc(var(--dot-x) + 15%) var(--dot-1-y) / calc(var(--dot-scale) * 20%) calc(var(--dot-scale) * 20%),
+    #0000;
+  background-repeat: no-repeat;
+  animation: 10s animation linear infinite;
+}
+
+.drawing-container::before, .drawing-container::after{  
+  color: var(--font);
+  font-size: 5vmin;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.drawing-container::before{
+  content:'divtober #4: quiet';
+  top: -5vmin;
+}
+
+.drawing-container::after{
+  content:'by maxew';
+  bottom: -7.5vmin;
+}
+
+
+@keyframes animation{
+  0%, 100%{
+    --dot-1-y : 80%;
+    --dot-2-y : 80%;
+    --dot-3-y : 80%;
+  }
+  
+/*  dots are jumping  */
+  
+  2.5%{
+    --dot-1-y : 70%;
+    --dot-2-y : 80%;
+    --dot-3-y : 80%;
+  }
+  5%{
+    --dot-1-y : 60%;
+    --dot-2-y : 70%;
+    --dot-3-y : 80%;
+  }
+  7.5%{
+    --dot-1-y : 70%;
+    --dot-2-y : 60%;
+    --dot-3-y : 70%;
+  }
+  10%{
+    --dot-1-y : 80%;
+    --dot-2-y : 70%;
+    --dot-3-y : 60%;
+  }
+  12.5%{
+    --dot-1-y : 70%;
+    --dot-2-y : 80%;
+    --dot-3-y : 70%;
+  }
+  15%{
+    --dot-1-y : 60%;
+    --dot-2-y : 70%;
+    --dot-3-y : 80%;
+  }
+  17.5%{
+    --dot-1-y : 70%;
+    --dot-2-y : 60%;
+    --dot-3-y : 70%;
+  }
+  
+/*  angry dot is coming  */
+  
+  20%{
+    --dot-1-y : 80%;
+    --dot-2-y : 70%;
+    --dot-3-y : 60%;
+    --angry-dot-x : -45%;
+  }  
+  22.5%{
+    --dot-1-y : 70%;
+    --dot-2-y : 80%;
+    --dot-3-y : 70%;
+    --angry-dot-x : -30%;
+  }
+  25%{
+    --dot-1-y : 60%;
+    --dot-2-y : 70%;
+    --dot-3-y : 80%;
+    --angry-dot-x : -20%;
+  }
+  27.5%{
+    --dot-1-y : 70%;
+    --dot-2-y : 60%;
+    --dot-3-y : 70%;
+    --angry-dot-x : -10%;
+  }
+  30%{
+    --dot-1-y : 80%;
+    --dot-2-y : 70%;
+    --dot-3-y : 60%;
+    --angry-dot-x : 0%;
+    --angry-dot-color: var(--dot);
+  }  
+  32.5%{
+    --dot-1-y : 70%;
+    --dot-2-y : 80%;
+    --dot-3-y : 80%;
+  }
+  35%{
+    --dot-1-y : 60%;
+    --dot-2-y : 70%;
+    --dot-3-y : 80%;
+    --text: var(--bg);
+    --bubble: var(--bg);
+    --angry-dot-color: orangered;
+  }
+  
+/*  QUIET !!!!  */
+  
+  37.5%{
+    --dot-1-y : 70%;
+    --dot-2-y : 60%;
+    --dot-3-y : 70%;
+    --text: var(--bg);
+    --bubble: var(--bg);
+  }
+  
+  /* QUIET !!! */ 
+  
+  40%{
+    --dot-color: #ddd;
+    --text: black;
+    --bubble: #ddd;
+  }  
+  
+/*  dots are leaving  */
+  
+  42.5%{
+    --dot-1-y : 80%;
+    --dot-2-y : 80%;
+    --dot-3-y : 70%;
+  }
+  45%{
+    --dot-1-y : 80%;
+    --dot-2-y : 80%;
+    --dot-3-y : 80%;
+    --dot-color: blue;
+  }
+  47.5%{
+    --dot-scale: .9;
+  }
+  50%{
+    --dot-scale: .75;    
+  }
+  52.5%{
+    --dot-scale: .55;
+  }  
+  55%{
+    --dot-scale: .3;
+    --dot-x: 0%;
+  }
+  56%{
+    --dot-x: 10%;
+  }
+  57%{
+    --dot-x: 20%;
+  }
+  58%{
+    --dot-x: 40%;
+  }
+  59%{
+    --dot-x: 80%;
+    --text: black;
+    --bubble: #ddd;
+  }
+  60%{
+    --dot-x: 110%;
+    --angry-dot-color: orangered;    
+  }
+  
+/*  angry dot is leaving  */
+  
+  65%{
+    --angry-dot-color: var(--dot);
+    --angry-dot-x : 0%;
+    --text: var(--bg);
+    --bubble: var(--bg);
+  }
+  66%{
+    --angry-dot-x : -5%;
+  }
+  67%{    
+    --angry-dot-x : -10%;
+  }
+  68%{    
+    --angry-dot-x : -15%;
+  }
+  69%{
+    --angry-dot-x : -20%;
+  }
+  70%{
+    --angry-dot-x : -25%;
+  }
+  71%{
+    --angry-dot-x : -30%;
+  }
+  72%{
+    --angry-dot-x : -35%;
+  }
+  73%{
+    --angry-dot-x : -40%;
+  }
+  74%{
+    --angry-dot-x : -45%;
+  }
+  
+  80%{
+    --dot-scale: .3;
+    --dot-x: 110%;
+  }
+}

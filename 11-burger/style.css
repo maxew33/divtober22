@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+
+*, ::before, ::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --bg: #222;
+  --font: #ddd;
+  --burger: #eee;
+  --pacman: #ffcc00;
+  --pacman-size: 20vmin;
+}
+
+body{
+  background: var(--bg);
+  height: 100vh;
+  font-size: 3.5vmin;
+  overflow: hidden;
+}
+
+.drawing-container{
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vmin;
+  width: 80vmin;
+  display: grid;
+  border: none;
+  place-content: center;
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 3.5vmin;
+  color: var(--font);
+  text-align: center;
+  line-height: 90vmin;
+  background: 
+    radial-gradient( var(--burger) 67%, #0000 0) 55% 49.65% / 3% 3%,
+    radial-gradient( var(--burger) 67%, #0000 0) 39.5% 49.65% / 3% 3%,
+    radial-gradient( var(--burger) 67%, #0000 0) 24.25% 49.65% / 3% 3%,
+    radial-gradient( var(--burger) 67%, #0000 0) 8.75% 49.65% / 3% 3%,
+    
+    radial-gradient( var(--burger) 67%, #0000 0) 72.75% 44.8% / 2.75% 2.75%,
+    radial-gradient( var(--burger) 67%, #0000 0) 72.75% 49.65% / 2.75% 2.75%,
+    radial-gradient( var(--burger) 67%, #0000 0) 72.75% 54.55% / 2.75% 2.75%,
+    radial-gradient( var(--burger) 67%, #0000 0) 88.25% 44.8% / 2.75% 2.75%,
+    radial-gradient( var(--burger) 67%, #0000 0) 88.25% 49.65% / 2.75% 2.75%,
+    radial-gradient( var(--burger) 67%, #0000 0) 88.25% 54.55% / 2.75% 2.75%,
+    
+    linear-gradient(var(--burger) 50%, #0000 0) 85% 46% / 15% 5.25%,
+    linear-gradient(var(--burger) 50%, #0000 0) 85% 51% / 15% 5.25%,
+    linear-gradient(var(--burger) 50%, #0000 0) 85% 56% / 15% 5.25%,
+     var(--bg);
+  background-repeat: no-repeat;
+/*   overflow: hidden; */
+}
+
+.drawing-container::after, 
+.drawing-container::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  height: var(--pacman-size);
+  width: calc(var(--pacman-size) * 2);
+  background: var(--pacman);
+  transform: rotate(0deg) scale(0);
+}
+
+/* pacman */
+
+.drawing-container::after{
+  --angle: -45deg;
+  --translate-y: 18.5vmin;
+  --border-radius-2: 0;
+  --border-radius-1: var(--pacman-size);
+  top: var(--pacman-size);
+  border-radius: var(--border-radius-1) var(--border-radius-1) var(--border-radius-2) var(--border-radius-2);
+  transform-origin: 50% 100%;
+  
+}
+
+.drawing-container::before{
+  --angle: 45deg;
+  --translate-y: -1vmin;
+  --border-radius-1: 0;
+  --border-radius-2: var(--pacman-size);
+  
+  top: calc(80vmin - calc(var(--pacman-size) * 2));
+  border-radius: var(--border-radius-1) var(--border-radius-1) var(--border-radius-2) var(--border-radius-2);
+  transform-origin: 50% 0%;
+  
+}
+
+.drawing-container:focus-within{
+  animation: eaten 2.5s linear forwards;
+  pointer-events: none;
+}
+
+.drawing-container:focus-within::after,
+.drawing-container:focus-within::before{
+  animation: yummy 2.5s linear forwards;
+}
+
+@keyframes yummy{
+  0%{
+  transform: translate(calc(var(--pacman-size) * -2)) rotate(0deg) scale(0) ;   
+  }
+  20%{
+    transform:translate(calc(25vmin - (calc(var(--pacman-size) * 2)))) rotate(var(--angle)) scale(1);   
+  }
+  40%{
+    transform: translate(calc(40vmin - (calc(var(--pacman-size) * 2)))) rotate(0);   
+  }
+  60%{
+    transform: translate(calc(60vmin - (calc(var(--pacman-size) * 2))), 0) rotate(var(--angle)); 
+  height: var(--pacman-size);
+  width: calc(var(--pacman-size) * 2); 
+  border-radius: var(--border-radius-1) var(--border-radius-1) var(--border-radius-2) var(--border-radius-2); 
+  }
+  80%,85%{
+    transform: translate(calc(80vmin - (calc(var(--pacman-size) * 2))), 0) rotate(0); 
+  height: var(--pacman-size);
+  width: calc(var(--pacman-size) * 2); 
+  border-radius: var(--border-radius-1) var(--border-radius-1) var(--border-radius-2) var(--border-radius-2); 
+  }
+  100%{  
+    transform: translate(56vmin, var(--translate-y)) rotate(var(--angle)); 
+  height: 2vmin;
+  width: 17.5vmin;
+  border-radius: 25vmin;
+  }
+}
+
+@keyframes eaten{
+  50%{
+     background: 
+    radial-gradient( var(--burger) 67%, #0000 0) 55% 49.65% / 3% 3%,
+    radial-gradient( var(--burger) 67%, #0000 0) 39.5% 49.65% / 3% 3%,
+    radial-gradient( var(--burger) 67%, #0000 0) 24.25% 49.65% / 3% 3%,
+    
+    radial-gradient( var(--burger) 67%, #0000 0) 72.75% 44.8% / 2.75% 2.75%,
+    radial-gradient( var(--burger) 67%, #0000 0) 72.75% 49.65% / 2.75% 2.75%,
+    radial-gradient( var(--burger) 67%, #0000 0) 72.75% 54.55% / 2.75% 2.75%,
+    radial-gradient( var(--burger) 67%, #0000 0) 88.25% 44.8% / 2.75% 2.75%,
+    radial-gradient( var(--burger) 67%, #0000 0) 88.25% 49.65% / 2.75% 2.75%,
+    radial-gradient( var(--burger) 67%, #0000 0) 88.25% 54.55% / 2.75% 2.75%,
+    
+    linear-gradient(var(--burger) 50%, #0000 0) 85% 46% / 15% 5.25%,
+    linear-gradient(var(--burger) 50%, #0000 0) 85% 51% / 15% 5.25%,
+    linear-gradient(var(--burger) 50%, #0000 0) 85% 56% / 15% 5.25%,
+     var(--bg);
+  background-repeat: no-repeat;
+  }
+  60%{
+     background: 
+    radial-gradient( var(--burger) 67%, #0000 0) 55% 49.65% / 3% 3%,
+    radial-gradient( var(--burger) 67%, #0000 0) 39.5% 49.65% / 3% 3%,
+    
+    radial-gradient( var(--burger) 67%, #0000 0) 72.75% 44.8% / 2.75% 2.75%,
+    radial-gradient( var(--burger) 67%, #0000 0) 72.75% 49.65% / 2.75% 2.75%,
+    radial-gradient( var(--burger) 67%, #0000 0) 72.75% 54.55% / 2.75% 2.75%,
+    radial-gradient( var(--burger) 67%, #0000 0) 88.25% 44.8% / 2.75% 2.75%,
+    radial-gradient( var(--burger) 67%, #0000 0) 88.25% 49.65% / 2.75% 2.75%,
+    radial-gradient( var(--burger) 67%, #0000 0) 88.25% 54.55% / 2.75% 2.75%,
+    
+    linear-gradient(var(--burger) 50%, #0000 0) 85% 46% / 15% 5.25%,
+    linear-gradient(var(--burger) 50%, #0000 0) 85% 51% / 15% 5.25%,
+    linear-gradient(var(--burger) 50%, #0000 0) 85% 56% / 15% 5.25%, 
+       var(--bg);
+  background-repeat: no-repeat;
+  }
+  80%{ background: 
+    radial-gradient( var(--burger) 67%, #0000 0) 55% 49.65% / 3% 3%,
+    
+    radial-gradient( var(--burger) 67%, #0000 0) 72.75% 44.8% / 2.75% 2.75%,
+    radial-gradient( var(--burger) 67%, #0000 0) 72.75% 49.65% / 2.75% 2.75%,
+    radial-gradient( var(--burger) 67%, #0000 0) 72.75% 54.55% / 2.75% 2.75%,
+    radial-gradient( var(--burger) 67%, #0000 0) 88.25% 44.8% / 2.75% 2.75%,
+    radial-gradient( var(--burger) 67%, #0000 0) 88.25% 49.65% / 2.75% 2.75%,
+    radial-gradient( var(--burger) 67%, #0000 0) 88.25% 54.55% / 2.75% 2.75%,
+    
+    linear-gradient(var(--burger) 50%, #0000 0) 85% 46% / 15% 5.25%,
+    linear-gradient(var(--burger) 50%, #0000 0) 85% 51% / 15% 5.25%,
+    linear-gradient(var(--burger) 50%, #0000 0) 85% 56% / 15% 5.25%,
+    var(--bg);
+    background-repeat: no-repeat;
+  }
+  90%, 100%{
+    background: var(--bg);
+    background-repeat: no-repeat;
+  }
+}

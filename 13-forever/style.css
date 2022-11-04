@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+
+*, ::before, ::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --bg: #222;
+  --font: #ddd;
+  --ring-1: gold;
+  --ring-2: silver;
+}
+
+body{
+  background: var(--bg);
+  height: 100vh;
+  font-size: 3.5vmin;
+  overflow: hidden;
+}
+
+.drawing-container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vmin;
+  width: 80vmin;
+  display: grid;
+  place-content: center;
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 3.5vmin;
+  color: var(--font);
+  text-align: center;
+  line-height: 90vmin;
+  background: 
+    /* rings */     
+    radial-gradient(circle at 50% 0%, #0000 35%, var(--ring-1) 0 40%, #0000 0) 20% 120% / 50% 50%,   
+    radial-gradient(circle at center, #0000 56%, var(--ring-2) 0 64%, #0000 0) 80% 70% / 50% 50%,
+    radial-gradient(circle at 50% 100%, #0000 35%, var(--ring-1) 0 40%, #0000 0) 20% 20% / 50% 50%, 
+    /* diamond */
+    conic-gradient(from 320deg, #3a97dd 13.5deg, #30d2f8 0 60deg, #3a97dd 0 75deg, #0000 0) 30% 37% / 25% 25%,
+    linear-gradient(var(--bg) 50%, #0000 0) 30% 39.75% / 25% 30%,
+    conic-gradient(from 144deg at 50% -30%, #30d2f8 13deg, #fff 0 58deg, #30d2f8 0 72deg, #0000 0) 30% 25.75% / 20% 20%,
+    var(--bg);
+  background-repeat: no-repeat;
+}
+
+.drawing-container::after, 
+.drawing-container::before{
+  content: "";
+  height: 80vmin;
+  width: 80vmin;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+}
+
+.drawing-container::after{
+  
+}
+
+.drawing-container::before{
+  
+}

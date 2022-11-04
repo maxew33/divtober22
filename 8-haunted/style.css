@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+
+*, ::before, ::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --bg: #3c3b7d;
+  --font: #ddd;
+  --white: #fdfdfd;
+  --pink: #febbc1;
+  --black: #020202;
+}
+
+body{
+  background: var(--bg);
+  height: 100vh;
+  font-size: 3.5vmin;
+  overflow: hidden;
+}
+
+.drawing-container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vmin;
+  width: 80vmin;
+  display: grid;
+  place-content: center;
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 3.5vmin;
+  color: var(--font);
+  text-align: center;
+  line-height: 90vmin;
+  background-repeat: no-repeat;
+}
+
+.drawing-container::after, 
+.drawing-container::before{
+  content: "";
+  height: 80vmin;
+  width: 80vmin;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.drawing-container::after{  
+  backdrop-filter: blur(.75vmin);
+}
+
+.drawing-container::before{
+  background:     
+/*  face   */    
+    radial-gradient(circle at 50% 0%, #0000 30%, var(--black) 0 45%, #0000 0) 50% 50% / 10% 10%,
+    
+    radial-gradient(ellipse 80% 100% at center, var(--black) 40%, #0000 0) 40% 30% / 7.5% 7.5%,
+    radial-gradient(ellipse 80% 100% at center, var(--black) 40%, #0000 0) 60% 30% / 7.5% 7.5%,
+    
+    radial-gradient(circle at center, var(--pink) 40%, #0000 0) 32.5% 40% / 15% 15%,
+    radial-gradient(circle at center, var(--pink) 40%, #0000 0) 67.5% 40% / 15% 15%,
+    
+/*  body   */
+    radial-gradient(circle at 85% 0%, var(--white) 40%, #0000 0) 75.25% 101% / 25% 25%,
+    radial-gradient(circle at 15% 0%, var(--white) 40%, #0000 0) 24.75% 101% / 25% 25%,
+    
+    radial-gradient(circle at 50% 0%, var(--white) 40%, #0000 0) 37.5% 104% / 25% 25%, 
+    radial-gradient(circle at 50% 0%, var(--white) 40%, #0000 0) 62.5% 104% / 25% 25%,
+    
+    radial-gradient(circle at 50% 100%, var(--white) 40%, #0000 0 ) 50% -100% / 70% 70%,
+    linear-gradient(90deg, #0000 0% 15%, var(--white) 0 85%, #0000 0) 50% 66% / 90% 40%,
+    #0000;
+  
+  background-repeat: no-repeat;
+  
+  animation: flying 2.5s ease-in-out infinite alternate;
+  
+}
+
+@keyframes flying{
+  from{
+    transform: translateY(-5vmin) scale(.9);
+  }
+  to{
+    transform: translateY(5vmin);
+  }
+}
+

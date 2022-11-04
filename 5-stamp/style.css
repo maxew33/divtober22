@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+
+*, ::before, ::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --bg: #222;
+  --font: #ddd;
+  --stamp: #cb5147;
+  --stamp-hole: #222;
+  --border: #000;
+  --stamp-bg: #ddd;
+  --stamp-hole-scale: 4.5%;
+  --eiffel-tower: #ddd;
+  --stamped: #111;
+}
+
+body{
+  background: var(--bg);
+  height: 100vh;
+  font-size: 3.5vmin;
+}
+
+.drawing-container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vmin;
+  color: var(--stamped);
+  font-family: courier;
+  font-weight: 600;
+  display: grid;
+  place-content: center;
+  padding: 0 35vmin 40vmin 0;
+  font-size: 6vmin;
+  aspect-ratio: 1;
+  background:
+    /* stamped */
+    radial-gradient(ellipse 100% 80% at 50% -10%, #0000 30%, var(--stamped) 30% 35%, #0000 0) 116% 22.5% / 30% 30%,
+    radial-gradient(ellipse 100% 80% at 50% -10%, #0000 30%, var(--stamped) 30% 35%, #0000 0) 116% 32.5% / 30% 30%,
+    radial-gradient(ellipse 100% 80% at 50% -10%, #0000 30%, var(--stamped) 30% 35%, #0000 0) 116% 42.5% / 30% 30%,
+    radial-gradient(ellipse 100% 80% at 50% 110%, #0000 30%, var(--stamped) 30% 35%, #0000 0) 90.5% -20% / 30% 30%,
+    radial-gradient(ellipse 100% 80% at 50% 110%, #0000 30%, var(--stamped) 30% 35%, #0000 0) 90.5% -10% / 30% 30%,
+    radial-gradient(ellipse 100% 80% at 50% 110%, #0000 30%, var(--stamped) 30% 35%, #0000 0) 90.5% 0% / 30% 30%,
+    radial-gradient(ellipse 100% 80% at 50% -10%, #0000 30%, var(--stamped) 30% 35%, #0000 0) 65% 22.5% / 30% 30%,
+    radial-gradient(ellipse 100% 80% at 50% -10%, #0000 30%, var(--stamped) 30% 35%, #0000 0) 65% 32.5% / 30% 30%,
+    radial-gradient(ellipse 100% 80% at 50% -10%, #0000 30%, var(--stamped) 30% 35%, #0000 0) 65% 42.5% / 30% 30%,
+    linear-gradient(var(--stamped) 10%, #0000 0) 18% 34% / 30% 10%,
+    linear-gradient(var(--stamped) 10%, #0000 0) 18% 20% / 30% 10%,
+    radial-gradient(circle at 27.5% 25%, #0000 15%, var(--stamped) 15% 16%, #0000 16% 20%, var(--stamped) 20% 21%, #0000 0) 0 0 / 100% 100%,
+    
+    /* la tour Eiffel - Eiffel tower */
+        /* top */
+    conic-gradient(at 50% 0%, #0000 175deg, var(--eiffel-tower) 170deg 185deg, #0000 0) 50% 16.5% / 5% 10%,
+    radial-gradient(circle at 50% 100%, var(--eiffel-tower) 0 40%, #0000 0) 50% 21% / 9% 9%,
+        /* last floor */    
+    linear-gradient(#0000 45%, var(--eiffel-tower) 45% 55%, #0000 0) 50% 20% / 10% 30%,
+        /* 2nd floor */
+    linear-gradient(#0000 45%, var(--eiffel-tower) 45% 55%, #0000 0) 50% 62% / 17% 30%,    
+        /* 1st floor */
+    linear-gradient(#0000 45%, var(--eiffel-tower) 45% 55%, #0000 0) 50% 79% / 27% 30%,
+        /* sides */
+    radial-gradient(ellipse 50% 100% at 117.5% 0%, #0000 65%, var(--eiffel-tower) 65% 72%, #0000 0) -131.5% 277% / 85% 91%,
+    radial-gradient(ellipse 50% 100% at -17.5% 0%, #0000 65%, var(--eiffel-tower) 65% 72%, #0000 0) 232.5% 277%  / 85% 91%,
+        /* bottom */
+    radial-gradient(ellipse 100% 80% at 50% 100%, #0000 30%, var(--eiffel-tower) 30% 40%, #0000 0) 50% 70% / 50% 50%,
+    
+    /* stamp border holes */
+        /* left */
+    radial-gradient(circle, var(--stamp-hole) 70%, #0000 70% 0) 13.5% 92% / var(--stamp-hole-scale) var(--stamp-hole-scale),
+    radial-gradient(circle, var(--stamp-hole) 70%, #0000 70% 0) 13.5% 81.5% / var(--stamp-hole-scale) var(--stamp-hole-scale),
+    radial-gradient(circle, var(--stamp-hole) 70%, #0000 70% 0) 13.5% 71% / var(--stamp-hole-scale) var(--stamp-hole-scale),
+    radial-gradient(circle, var(--stamp-hole) 70%, #0000 70% 0) 13.5% 60.5% / var(--stamp-hole-scale) var(--stamp-hole-scale),
+    radial-gradient(circle, var(--stamp-hole) 70%, #0000 70% 0) 13.5% 50% / var(--stamp-hole-scale) var(--stamp-hole-scale),
+    radial-gradient(circle, var(--stamp-hole) 70%, #0000 70% 0) 13.5% 39.5% / var(--stamp-hole-scale) var(--stamp-hole-scale),
+    radial-gradient(circle, var(--stamp-hole) 70%, #0000 70% 0) 13.5% 29% / var(--stamp-hole-scale) var(--stamp-hole-scale),
+    radial-gradient(circle, var(--stamp-hole) 70%, #0000 70% 0) 13.5% 18.5% / var(--stamp-hole-scale) var(--stamp-hole-scale),
+    radial-gradient(circle, var(--stamp-hole) 70%, #0000 70% 0) 13.5% 8% / var(--stamp-hole-scale) var(--stamp-hole-scale),
+    
+        /* right */    
+    radial-gradient(circle, var(--stamp-hole) 70%, #0000 70% 0) 86.5% 92% / var(--stamp-hole-scale) var(--stamp-hole-scale),
+    radial-gradient(circle, var(--stamp-hole) 70%, #0000 70% 0) 86.5% 81.5% / var(--stamp-hole-scale) var(--stamp-hole-scale),
+    radial-gradient(circle, var(--stamp-hole) 70%, #0000 70% 0) 86.5% 71% / var(--stamp-hole-scale) var(--stamp-hole-scale),
+    radial-gradient(circle, var(--stamp-hole) 70%, #0000 70% 0) 86.5% 60.5% / var(--stamp-hole-scale) var(--stamp-hole-scale),
+    radial-gradient(circle, var(--stamp-hole) 70%, #0000 70% 0) 86.5% 50% / var(--stamp-hole-scale) var(--stamp-hole-scale),
+    radial-gradient(circle, var(--stamp-hole) 70%, #0000 70% 0) 86.5% 39.5% / var(--stamp-hole-scale) var(--stamp-hole-scale),
+    radial-gradient(circle, var(--stamp-hole) 70%, #0000 70% 0) 86.5% 29% / var(--stamp-hole-scale) var(--stamp-hole-scale),
+    radial-gradient(circle, var(--stamp-hole) 70%, #0000 70% 0) 86.5% 18.5% / var(--stamp-hole-scale) var(--stamp-hole-scale),
+    radial-gradient(circle, var(--stamp-hole) 70%, #0000 70% 0) 86.5% 8% / var(--stamp-hole-scale) var(--stamp-hole-scale),
+    
+        /* bottom */    
+    radial-gradient(circle, var(--stamp-hole) 70%, #0000 70% 0) 81.5% 97% / var(--stamp-hole-scale) var(--stamp-hole-scale),
+    radial-gradient(circle, var(--stamp-hole) 70%, #0000 70% 0) 71% 97% / var(--stamp-hole-scale) var(--stamp-hole-scale),
+    radial-gradient(circle, var(--stamp-hole) 70%, #0000 70% 0) 60.5% 97% / var(--stamp-hole-scale) var(--stamp-hole-scale),
+    radial-gradient(circle, var(--stamp-hole) 70%, #0000 70% 0) 50% 97% / var(--stamp-hole-scale) var(--stamp-hole-scale),
+    radial-gradient(circle, var(--stamp-hole) 70%, #0000 70% 0) 39.5% 97% / var(--stamp-hole-scale) var(--stamp-hole-scale),
+    radial-gradient(circle, var(--stamp-hole) 70%, #0000 70% 0) 29% 97% / var(--stamp-hole-scale) var(--stamp-hole-scale),
+    radial-gradient(circle, var(--stamp-hole) 70%, #0000 70% 0) 18.5% 97% / var(--stamp-hole-scale) var(--stamp-hole-scale),
+    
+        /* top */    
+    radial-gradient(circle, var(--stamp-hole) 70%, #0000 70% 0) 81.5% 3% / var(--stamp-hole-scale) var(--stamp-hole-scale),
+    radial-gradient(circle, var(--stamp-hole) 70%, #0000 70% 0) 71% 3% / var(--stamp-hole-scale) var(--stamp-hole-scale),
+    radial-gradient(circle, var(--stamp-hole) 70%, #0000 70% 0) 60.5% 3% / var(--stamp-hole-scale) var(--stamp-hole-scale),
+    radial-gradient(circle, var(--stamp-hole) 70%, #0000 70% 0) 50% 3% / var(--stamp-hole-scale) var(--stamp-hole-scale),
+    radial-gradient(circle, var(--stamp-hole) 70%, #0000 70% 0) 39.5% 3% / var(--stamp-hole-scale) var(--stamp-hole-scale),
+    radial-gradient(circle, var(--stamp-hole) 70%, #0000 70% 0) 29% 3% / var(--stamp-hole-scale) var(--stamp-hole-scale),
+    radial-gradient(circle, var(--stamp-hole) 70%, #0000 70% 0) 18.5% 3% / var(--stamp-hole-scale) var(--stamp-hole-scale),
+    
+    /* stamp frame */
+    linear-gradient(90deg, var(--stamp)0 100%) 50% 50% / 60% 80%,
+    linear-gradient(90deg, var(--stamp-bg)0 100%) 50% 50% / 70% 90%,
+    #0000;
+  background-repeat: no-repeat;
+}
+
+.drawing-container::before, .drawing-container::after{
+  font-family: 'Reem Kufi', sans-serif;
+  color: var(--font);
+  font-size: 4.5vmin;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.drawing-container::before{
+  content:'divtober #5: stamp';
+  top: -5vmin;
+}
+
+.drawing-container::after{
+  content:'by maxew';
+  bottom: -10vmin;
+}

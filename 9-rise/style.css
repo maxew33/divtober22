@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+
+*, ::before, ::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --bg: #000;
+  --font: #60181e;
+  --shadow: #60181e;
+  --sun: #f7941d;
+  --sky: #db322f;
+  --cloud: #461419;
+}
+
+body{
+  background: var(--sky);
+  height: 100vh;
+  font-size: 3.5vmin;
+  overflow: hidden;
+}
+
+.drawing-container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vmin;
+  width: 80vmin;
+  display: grid;
+  border: none;
+  place-content: center;
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 3.5vmin;
+  color: var(--font);
+  text-align: center;
+  line-height: 90vmin;
+  background: 
+    
+/*  ground  */
+    linear-gradient(#0000 90%, var(--shadow) 0),
+    
+/*  torii   */
+    radial-gradient(ellipse 100% 10% at 50% 0%, var(--sun) 53%, #0000 0) 50% 120% / 57.5% 55%,
+    radial-gradient(ellipse 100% 30% at 50% -10%, var(--shadow) 0 60%, #0000 0) 50% 120% / 56% 54%,
+    radial-gradient(ellipse 100% 70% at 50% 0%, #0000 92.5%, var(--shadow) 0 100%, #0000 0) 50% 55% / 50% 45%,
+    conic-gradient(from 350deg at 50% 2500%, var(--shadow) 20deg, #0000 0) 50% 60% / 80% 5%,
+    linear-gradient(var(--shadow) 0 100%) 50% 62.5% / 40% 2.5%,
+    
+    linear-gradient(var(--shadow) 0 100%) 50% 67.5% / 41% .75%,
+    linear-gradient(var(--shadow) 0 100%) 50% 68.5% / 40% 1.75%,
+    
+    linear-gradient(var(--shadow) 0 100%) 50% 65.5% / 4% 5%,
+    linear-gradient(var(--shadow) 0 100%) 46.5% 65.5% / 1.25% 5%,
+    linear-gradient(var(--shadow) 0 100%) 53.75% 65.5% / 1.25% 5%,
+    
+    conic-gradient(from 178.5deg at 50% -100%, var(--shadow) 3deg, #0000 0) 35% 85% / 15% 35%,
+    conic-gradient(from 178.5deg at 50% -100%, var(--shadow) 3deg, #0000 0) 65% 85% / 15% 35%,
+    
+/*  sun   */
+    radial-gradient(circle at 50% 72.5%, var(--sun) 42.5%, var(--sky) 55%);
+  background-repeat: no-repeat;
+}

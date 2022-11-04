@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+
+*, ::before, ::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --bg: #000;
+  --font: #ddd;
+  --shadow: #000;
+  --light: #eee;
+}
+
+body{
+  background: var(--bg);
+  height: 100vh;
+  font-size: 3.5vmin;
+  overflow: hidden;
+}
+
+.drawing-container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vmin;
+  width: 80vmin;
+  display: grid;
+  place-content: center;
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 3.5vmin;
+  color: var(--font);
+  text-align: center;
+  line-height: 90vmin;
+  background: 
+    var(--light);
+  background-repeat: no-repeat;
+}
+
+
+.drawing-container::after, 
+.drawing-container::before{
+  content: "";
+  height: 81vmin;
+  width: 81vmin;
+  position: absolute;
+  top: -0.5vmin;
+  left: -0.5vmin;
+  background-repeat: no-repeat;
+}
+
+.drawing-container::after{  
+}
+
+.drawing-container::before{
+  filter: blur(.125vmin);
+  background:
+/*  birds  */
+    /*1*/    
+    radial-gradient(90% 100% at 0% 100%, #0000 40%, var(--shadow) 0 77.75%, #0000 0) 54% 45% / 8% 8%,
+    radial-gradient(circle at 0% 100%, #0000 40%, var(--light) 0 55%, #0000 0) 54.5% 45% / 7.75% 7.75%,
+    radial-gradient(90% 100% at 100% 100%, #0000 40%, var(--shadow) 0 77.75%, #0000 0) 59% 45% / 8% 8%,
+    radial-gradient(circle at 100% 100%, #0000 40%, var(--light) 0 55%, #0000 0) 59% 45% / 7.75% 7.75%,
+    /*2*/    
+    radial-gradient(90% 100% at 0% 100%, #0000 40%, var(--shadow) 0 77.75%, #0000 0) 79% 30% / 8% 8%,
+    radial-gradient(circle at 0% 100%, #0000 40%, var(--light) 0 55%, #0000 0) 79.5% 30% / 7.75% 7.75%,
+    radial-gradient(90% 100% at 100% 100%, #0000 40%, var(--shadow) 0 77.75%, #0000 0) 84% 30% / 8% 8%,
+    radial-gradient(circle at 100% 100%, #0000 40%, var(--light) 0 55%, #0000 0) 84% 30% / 7.75% 7.75%,
+    /*3*/    
+    radial-gradient(90% 100% at 0% 100%, #0000 40%, var(--shadow) 0 77.75%, #0000 0) 59.5% 25% / 7% 7%,
+    radial-gradient(circle at 0% 100%, #0000 40%, var(--light) 0 55%, #0000 0) 59.75% 25% / 6.75% 6.75%,
+    radial-gradient(90% 100% at 100% 100%, #0000 40%, var(--shadow) 0 77.75%, #0000 0) 63.5% 25% / 7% 7%,
+    radial-gradient(circle at 100% 100%, #0000 40%, var(--light) 0 55%, #0000 0) 63.5% 25% / 6.75% 6.75%,
+    /*4*/    
+    radial-gradient(90% 100% at 0% 100%, #0000 40%, var(--shadow) 0 77.75%, #0000 0) 49% 20% / 8% 8%,
+    radial-gradient(circle at 0% 100%, #0000 40%, var(--light) 0 55%, #0000 0) 49.5% 20% / 7.75% 7.75%,
+    radial-gradient(90% 100% at 100% 100%, #0000 40%, var(--shadow) 0 77.75%, #0000 0) 54% 20% / 8% 8%,
+    radial-gradient(circle at 100% 100%, #0000 40%, var(--light) 0 55%, #0000 0) 54% 20% / 7.75% 7.75%,
+    /*5*/
+    radial-gradient(90% 100% at 0% 100%, #0000 40%, var(--shadow) 0 77.75%, #0000 0) 74% 10% / 11% 11%,
+    radial-gradient(circle at 0% 100%, #0000 40%, var(--light) 0 55%, #0000 0) 74% 10% / 10% 10%,
+    radial-gradient(90% 100% at 100% 100%, #0000 40%, var(--shadow) 0 77.75%, #0000 0) 80% 10% / 11% 11%,
+    radial-gradient(circle at 100% 100%, #0000 40%, var(--light) 0 55%, #0000 0) 80% 10% / 10% 10%,
+/*  head   */
+    radial-gradient(circle at 45% 21%, var(--shadow) 22%, #0000 0),
+    /*nose*/
+    linear-gradient(var(--shadow) 20%, #0000 0) 23.5% 29.35% / 10% 10%,
+    linear-gradient(130deg, #0000 50%, var(--shadow) 0) 20% 16.5% / 10% 10%,
+    radial-gradient(ellipse 100% 69% at 22% 26%, var(--shadow) 3.5%, #0000 0),
+    /*mouth*/
+    conic-gradient(from 12deg at 0% 50%, var(--shadow) 95deg, #0000 0) 24% 32% / 12% 12%,
+    conic-gradient(from 25deg at 0% 50%, var(--shadow) 90deg, #0000 0) 23.5% 35% / 10% 10%,
+    /*chin*/
+    radial-gradient(circle at 26% 39.25%, var(--shadow) 3%, #0000 0),
+    linear-gradient(10deg, #0000 70%, var(--shadow) 0) 27.5% 44.5% / 10% 10%,
+    radial-gradient(ellipse 86% 100% at 44% 30%, var(--shadow) 22%, #0000 0),
+/*  body   */
+    linear-gradient(305deg, var(--shadow) 50%, #0000 0) 2.75% 80% / 30% 30%,
+    radial-gradient(ellipse 72% 100% at 38% 69.5%, var(--shadow) 20%, #0000 0),
+    radial-gradient(ellipse 91% 100% at 30.5% 109%, var(--shadow) 35%, #0000 0),
+/*   back   */
+    linear-gradient(100deg, #0000 40%, var(--shadow) 0);
+  
+  background-repeat: no-repeat;  
+}
